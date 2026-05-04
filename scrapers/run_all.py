@@ -74,6 +74,12 @@ SCRAPERS = [
     # 세종특별시 (1 of 2 — 세종도시교통공사 has no tables, JS-loaded)
     "scrapers.sejong.sejong_si_notice",
     "scrapers.sejong.sejong_si_gosi",
+    # 경상북도 (9 of 38 — most are JS-rendered portal/saeol or open_content)
+    "scrapers.gyeongsangbuk.gyeongbuk_batch",
+    # 경상남도 (9 of 32 — portal/saeol JS, .web NO TABLES, etc.)
+    "scrapers.gyeongsangnam.gyeongnam_batch",
+    # 강원도 (15 of 32 — SSL errors, timeouts, JS onclick)
+    "scrapers.gangwon.gangwon_batch",
     # 제주도 (3 of 4 — 서귀포시청 returns empty initial HTML)
     "scrapers.jeju.jeju_do",
     "scrapers.jeju.jeju_si",
