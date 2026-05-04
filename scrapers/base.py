@@ -166,10 +166,13 @@ class SupabaseSink:
         self.table = table
 
     def write(self, notices: Iterable[Notice]) -> int:
-        rows = [n.asdict() for n in notices]
+        # Deduplicate by notice_id — some boards show pinned notices twice
+        seen: dict[str, dict] = {}
+        for n in notices:
+            seen[n.notice_id] = n.asdict()
+        rows = list(seen.values())
         if not rows:
             return 0
-        # Supabase Python client batches; do one call per scraper output (≤ ~50 rows)
         self.client.table(self.table).upsert(rows, on_conflict="notice_id").execute()
         return len(rows)
 
