@@ -28,8 +28,17 @@ from scrapers.base import StdoutSink, JsonFileSink, SupabaseSink, polite_sleep
 SCRAPERS = [
     "scrapers.chungcheongnam.asan",
     "scrapers.busan.busan_si",
-    "scrapers.seoul.seoul_si",
     "scrapers.daejeon.daejeon_si",
+    # Seoul (full coverage of scrapeable sub-entities)
+    "scrapers.seoul.seoul_si",
+    "scrapers.seoul.suwon_kukto",
+    "scrapers.seoul.sisul",
+    "scrapers.seoul.ish",
+    "scrapers.seoul.doro_seoul",
+    # blocked by upstream anti-bot — leave as TODO for later:
+    #   서울지방국토관리청 (molit.go.kr/srocm m_13078)
+    #   의정부 국토관리사무소 (molit subdomain)
+    #   한강유역환경청 (env-ministry firewall)
 ]
 
 
