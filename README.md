@@ -11,15 +11,9 @@ npm run dev
 
 Open the printed URL. Pick a region in the left sidebar, expand it, click a sub-entity to see its source pages. The "최근 공지사항" panel is a placeholder until Phase 2.
 
-## Regenerating `src/data/regions.json`
+## Data
 
-Whenever `list.xlsx` changes:
-
-```powershell
-python scripts/build_regions_json.py
-```
-
-Requires `openpyxl` (`pip install openpyxl`).
+`src/data/regions.json` is the canonical source for the region/sub-entity tree. It's hand-maintained — edit directly when adding/removing entries. Currently: **21 regions / 245 sub-entities / 372 source links**.
 
 ## Roadmap
 
