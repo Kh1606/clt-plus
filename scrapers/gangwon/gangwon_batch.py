@@ -1,15 +1,15 @@
 """
 강원도 — batch of sites.
 
-Skipped (JS / SSL error / timeout / NO TABLES / 404):
-  춘천시×2 (board/list.chuncheon 404 + 고시 JS), 홍천군 고시 (timeout),
-  횡성군 공지 (.web HTTP 400), 철원군 공지 (timeout), 화천군 고시 (contents.do NO TABLES),
-  정선군×2 (JS onclick), 양구군×2 (user_sub.php NO TABLES),
-  고성군×2 (SSL error), 속초시×2 (SSL error), 동해시×2 (SSL error),
-  태백시×2 (timeout), 삼척시×2 (.web NO TABLES), 양양군×2 (JS #a)
+Skipped (JS / SSL error / timeout / NO TABLES):
+  춘천시×2 (NO TABLES), 홍천군 고시 (eminwon JS),
+  화천군 고시 (contents.do NO TABLES),
+  정선군×2 (only download hrefs / NO TABLES), 양구군×2 (user_sub.php NO TABLES),
+  강릉시×2 (SSL handshake failure), 고성군×2 (SSL error),
+  속초시×2 (SSL error), 동해시×2 (SSL error), 삼척시×2 (.web NO TABLES),
+  양양군×2 (JS #a), 강원도청 고시+도로사업소 (href=#nolink JS)
 
 molit 강릉/정선/홍천 국토관리사무소 — LST.jsp boards (molit_jsp helper).
-강원도청 고시공고 — href=#nolink (JS onclick) → skipped.
 평창군 고시 — portal CMS, noticeMgrNo param in detail hrefs, title col 1.
 """
 from scrapers.base import SourceMeta
@@ -39,7 +39,11 @@ SCRAPERS = [
     _entry("홍천군", "공지사항",
            "https://www.hongcheon.go.kr/www/selectBbsNttList.do?key=255&bbsNo=1",
            require="selectBbsNttView"),
-    # 횡성군 고시 — selectBbsNttList CMS (jsessionid in href), title col 1
+    # 횡성군 공지 — selectBbsNttList CMS, title col 1
+    _entry("횡성군", "공지사항",
+           "https://www.hsg.go.kr/www/selectBbsNttList.do?bbsNo=59&key=812&",
+           require="selectBbsNttView"),
+    # 횡성군 고시 — same CMS (jsessionid in href), title col 1
     _entry("횡성군", "고시공고",
            "https://www.hsg.go.kr/www/selectBbsNttList.do?bbsNo=65&key=821&",
            require="selectBbsNttView"),
@@ -50,7 +54,11 @@ SCRAPERS = [
     _entry("영월군", "고시공고",
            "https://www.yw.go.kr/www/selectBbsNttList.do?bbsNo=17&key=273",
            require="selectBbsNttView"),
-    # 철원군 고시 — selectBbsNttList CMS (CWG_JSESSIONID in href), title col 1
+    # 철원군 공지 — selectBbsNttList CMS (CWG_JSESSIONID in href), title col 1
+    _entry("철원군", "공지사항",
+           "https://www.cwg.go.kr/www/selectBbsNttList.do?bbsNo=24&key=206",
+           require="selectBbsNttView"),
+    # 철원군 고시 — same CMS, title col 1
     _entry("철원군", "고시공고",
            "https://www.cwg.go.kr/www/selectBbsNttList.do?bbsNo=25&key=1226",
            require="selectBbsNttView"),
@@ -72,6 +80,13 @@ SCRAPERS = [
     _entry("평창군", "고시공고",
            "https://www.pc.go.kr/portal/government/government-notification",
            require="noticeMgrNo"),
+    # 태백시 — selectBbsNttList CMS, title col 1
+    _entry("태백시", "공지사항",
+           "https://www.taebaek.go.kr/www/selectBbsNttList.do?bbsNo=24&key=351",
+           require="selectBbsNttView"),
+    _entry("태백시", "고시공고",
+           "https://www.taebaek.go.kr/www/selectBbsNttList.do?bbsNo=25&key=352",
+           require="selectBbsNttView"),
     # molit 국토관리사무소 boards (LST.jsp)
     _molit("강릉 국토관리사무소", "공지사항",
            "http://www.molit.go.kr/wrocm/USR/BORD0201/m_20081/LST.jsp"),

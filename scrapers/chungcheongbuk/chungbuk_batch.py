@@ -1,14 +1,13 @@
 """
 충청북도 — batch of sites using the simple_table helper.
 
-Skipped (JS-rendered / SSL error / 404):
-  충북도청 고시공고 (contents.do JS)
-  청주시 고시공고 + 4구 고시공고 (all contents.do JS)
+Skipped (JS-rendered / SSL error / no table):
+  충북도청 고시공고 (contents.do JS / no table)
+  청주시 고시공고 + 4구 고시공고 (all contents.do JS / no table)
   영동군 (SSL cert error)
   진천군 고시공고 (no table)
   증평군 고시공고 (no table)
   단양군 고시공고 (no table)
-  보은군 (404)
 """
 from scrapers.base import SourceMeta
 from scrapers._helpers.simple_table import make_scrape
@@ -81,9 +80,13 @@ SCRAPERS = [
     _entry("진천군", "공지사항",
            "https://www.jincheon.go.kr/home/sub.do?menukey=2908",
            title_col=2, require="mode=view"),
-    # 옥천군 — eGovFrame selectBbsNttList, title col 1
+    # 옥천군 — eGovFrame selectBbsNttList
     _entry("옥천군", "공지사항",
            "https://www.oc.go.kr/www/selectBbsNttList.do?bbsNo=36&key=232&",
+           require="selectBbsNttView"),
+    # 옥천군 고시공고 — same CMS, col 1 (공고번호|제목|담당)
+    _entry("옥천군", "고시공고",
+           "https://www.oc.go.kr/www/selectBbsNttList.do?bbsNo=40&key=236&",
            require="selectBbsNttView"),
     # 증평군 — eGovFrame selectBoardList, title col 2
     _entry("증평군", "공지사항",
@@ -95,6 +98,14 @@ SCRAPERS = [
            require="selectBbsNttView"),
     _entry("괴산군", "고시공고",
            "https://www.goesan.go.kr/www/selectBbsNttList.do?bbsNo=214&key=137",
+           require="selectBbsNttView"),
+    # 보은군 — eGovFrame selectBbsNttList, title col 1
+    _entry("보은군", "공지사항",
+           "https://www.boeun.go.kr/www/selectBbsNttList.do?bbsNo=4&key=134",
+           require="selectBbsNttView"),
+    # 보은군 고시공고 — same CMS, title col 1
+    _entry("보은군", "고시공고",
+           "https://www.boeun.go.kr/www/selectBbsNttList.do?bbsNo=66&key=194",
            require="selectBbsNttView"),
     # 단양군 — custom board, title col 2, action=read detail links
     _entry("단양군", "공지사항",
