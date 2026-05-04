@@ -17,11 +17,14 @@ dist-ssr/
 *.log
 npm-debug.log*
 
-# Python (for scripts/)
+# Python (for scrapers/)
 __pycache__/
 *.pyc
 .venv/
 venv/
+
+# Local scraper snapshot (used for debugging — Phase 2 will write to Supabase, not a file)
+scrapers/_local_snapshot.json
 
 # old reference project — NOT part of clt-plus repo
 Aiforus_SaaS_pc/
