@@ -44,6 +44,13 @@ SCRAPERS = [
     "scrapers.busan.yeongju_kukto",
     "scrapers.busan.busan_gunsul",
     "scrapers.busan.bisco",
+    # 대구광역시 (1 of 5 — 대구시청 JS-loaded; 김천/상주시청 404; 대구지방환경청 blocked)
+    "scrapers.daegu.daegu_dosi",
+    # 인천광역시 (2 of 3 — 인천도시공사 returns HTTP 500)
+    "scrapers.incheon.incheon_si",
+    "scrapers.incheon.jonggeon",
+    # 광주광역시 (1 of 3 — 광주시청 + 도시건설본부 are JS-loaded)
+    "scrapers.gwangju.gmcc",
 ]
 
 
