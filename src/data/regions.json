@@ -1,0 +1,3192 @@
+[
+  {
+    "region": "-",
+    "subEntities": [
+      {
+        "name": "인포21",
+        "sources": [
+          {
+            "page": "용역공고",
+            "url": "https://infose.info21c.net/common/finder/index?findStr=%EA%B8%B0%EC%88%A0%EC%A0%9C%EC%95%88",
+            "sheet": "주요관청"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "region": "기타",
+    "subEntities": [
+      {
+        "name": "경기도 신기술 플랫폼",
+        "sources": [
+          {
+            "page": "공법선정안내공고",
+            "url": "https://newtech.gg.go.kr/main/pblanNow.do",
+            "sheet": "주요관청"
+          }
+        ]
+      },
+      {
+        "name": "대구광역시 신기술 플랫폼",
+        "sources": [
+          {
+            "page": "공법선정안내공고",
+            "url": "https://singisul.daegu.go.kr/index.do?menu_id=00000880",
+            "sheet": "주요관청"
+          }
+        ]
+      },
+      {
+        "name": "건설신기술특허플랫폼",
+        "sources": [
+          {
+            "page": "특정공법 후보모집",
+            "url": "https://www.calspia.go.kr/portal/cnpp/viewCnppCnmtRcrPsu.do",
+            "sheet": "주요관청"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "region": "서울특별시",
+    "subEntities": [
+      {
+        "name": "서울지방국토관리청",
+        "sources": [
+          {
+            "page": "알림마당",
+            "url": "https://www.molit.go.kr/srocm/USR/BORD0201/m_13078/BRD.jsp",
+            "sheet": "주요관청"
+          }
+        ]
+      },
+      {
+        "name": "수원 국토관리사무소",
+        "sources": [
+          {
+            "page": "공지사항",
+            "url": "https://www.molit.go.kr/srocm/USR/BORD0201/m_19696/LST.jsp",
+            "sheet": "주요관청"
+          }
+        ]
+      },
+      {
+        "name": "의정부 국토관리사무소",
+        "sources": [
+          {
+            "page": "공지사항",
+            "url": "https://www.molit.go.kr/srocm/USR/BORD0201/m_19896/LST.jsp",
+            "sheet": "주요관청"
+          }
+        ]
+      },
+      {
+        "name": "한강유역환경청",
+        "sources": [
+          {
+            "page": "알림마당",
+            "url": "https://www.me.go.kr/hg/web/index.do?menuId=1254",
+            "sheet": "주요관청"
+          }
+        ]
+      },
+      {
+        "name": "서울시청",
+        "sources": [
+          {
+            "page": "공고",
+            "url": "https://www.seoul.go.kr/news/news_notice.do",
+            "sheet": "주요관청"
+          }
+        ]
+      },
+      {
+        "name": "서울시설관리공단",
+        "sources": [
+          {
+            "page": "알림마당",
+            "url": "https://www.sisul.or.kr/open_content/main/introduce/notice.jsp",
+            "sheet": "주요관청"
+          }
+        ]
+      },
+      {
+        "name": "서울주택도시공사",
+        "sources": [
+          {
+            "page": "공지사항",
+            "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/list.do?multi_itm_seqs=1,2,4,8,16,32,64,128,256,512",
+            "sheet": "주요관청"
+          }
+        ]
+      },
+      {
+        "name": "서울시 도로사업소",
+        "sources": [
+          {
+            "page": "공지사항",
+            "url": "https://cis.seoul.go.kr/TotalAlimi_new/Notice.action",
+            "sheet": "주요관청"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "region": "부산광역시",
+    "subEntities": [
+      {
+        "name": "부산지방국토관리청",
+        "sources": [
+          {
+            "page": "알림마당",
+            "url": "https://www.molit.go.kr/brocm/USR/BORD0201/m_15109/BRD.jsp",
+            "sheet": "주요관청"
+          }
+        ]
+      },
+      {
+        "name": "진주 국토관리사무소",
+        "sources": [
+          {
+            "page": "공지사항",
+            "url": "https://www.molit.go.kr/brocm/USR/BORD0201/m_20654/LST.jsp",
+            "sheet": "주요관청"
+          }
+        ]
+      },
+      {
+        "name": "대구 국토관리사무소",
+        "sources": [
+          {
+            "page": "공지사항",
+            "url": "https://www.molit.go.kr/brocm/USR/BORD0201/m_21007/LST.jsp",
+            "sheet": "주요관청"
+          }
+        ]
+      },
+      {
+        "name": "진영 국토관리사무소",
+        "sources": [
+          {
+            "page": "공지사항",
+            "url": "https://www.molit.go.kr/brocm/USR/BORD0201/m_20580/LST.jsp",
+            "sheet": "주요관청"
+          }
+        ]
+      },
+      {
+        "name": "포항 국토관리사무소",
+        "sources": [
+          {
+            "page": "공지사항",
+            "url": "https://www.molit.go.kr/brocm/USR/BORD0201/m_20857/LST.jsp",
+            "sheet": "주요관청"
+          }
+        ]
+      },
+      {
+        "name": "영주 국토관리사무소",
+        "sources": [
+          {
+            "page": "공지사항",
+            "url": "https://www.molit.go.kr/brocm/USR/BORD0201/m_20922/LST.jsp",
+            "sheet": "주요관청"
+          }
+        ]
+      },
+      {
+        "name": "부산시청 건설본부",
+        "sources": [
+          {
+            "page": "공지사항",
+            "url": "https://www.busan.go.kr/gunsul/gunsulopen01",
+            "sheet": "주요관청"
+          }
+        ]
+      },
+      {
+        "name": "부산시청",
+        "sources": [
+          {
+            "page": "고시 공고",
+            "url": "https://www.busan.go.kr/nbgosi",
+            "sheet": "주요관청"
+          }
+        ]
+      },
+      {
+        "name": "부산시설공단",
+        "sources": [
+          {
+            "page": "새소식",
+            "url": "https://www.bisco.or.kr/news/news01/",
+            "sheet": "주요관청"
+          }
+        ]
+      },
+      {
+        "name": "부산도시공사",
+        "sources": [
+          {
+            "page": "공지사항",
+            "url": "https://www.bmc.busan.kr/bmc/bbs/list.do?ptIdx=788&mId=0707000000",
+            "sheet": "주요관청"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "region": "대구광역시",
+    "subEntities": [
+      {
+        "name": "김천시청",
+        "sources": [
+          {
+            "page": "고시 공고",
+            "url": "https://www.gc.go.kr/portal/saeol/gosi/list.do?mId=1202090200",
+            "sheet": "주요관청"
+          }
+        ]
+      },
+      {
+        "name": "상주시청",
+        "sources": [
+          {
+            "page": "고시 공고",
+            "url": "https://www.sangju.go.kr/gosi/list.tc?mn=3016&pageSeq=2686&paramIdx=&notAncmtSeCode=01%2C02%2C03%2C04%2C05%2C07",
+            "sheet": "주요관청"
+          },
+          {
+            "page": "입찰공고",
+            "url": "https://www.sangju.go.kr/contract/bidList.tc?mn=2386&pageSeq=2689",
+            "sheet": "주요관청"
+          }
+        ]
+      },
+      {
+        "name": "대구지방환경청",
+        "sources": [
+          {
+            "page": "알림마당",
+            "url": "https://me.go.kr/daegu/web/index.do?menuId=683",
+            "sheet": "주요관청"
+          }
+        ]
+      },
+      {
+        "name": "대구도시공사",
+        "sources": [
+          {
+            "page": "공지사항",
+            "url": "https://www.daegu.go.kr/index.do?menu_id=00000854&servletPath=%2Findex.do",
+            "sheet": "주요관청"
+          }
+        ]
+      },
+      {
+        "name": "대구시청",
+        "sources": [
+          {
+            "page": "고시 공고",
+            "url": "https://www.daegu.go.kr/index.do?menu_id=00000855",
+            "sheet": "주요관청"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "region": "인천광역시",
+    "subEntities": [
+      {
+        "name": "인천시청",
+        "sources": [
+          {
+            "page": "고시 공고",
+            "url": "http://announce.incheon.go.kr/citynet/jsp/sap/SAPGosiBizProcess.do?command=searchList&flag=gosiGL&svp=Y&sido=ic",
+            "sheet": "주요관청"
+          }
+        ]
+      },
+      {
+        "name": "인천도시공사",
+        "sources": [
+          {
+            "page": "공지사항",
+            "url": "https://www.ih.co.kr/open_content/main/customer/notification/notice.jsp",
+            "sheet": "주요관청"
+          },
+          {
+            "page": "입찰공고",
+            "url": "https://www.ih.co.kr/open_content/main/customer/notification/bid.jsp",
+            "sheet": "주요관청"
+          }
+        ]
+      },
+      {
+        "name": "인천시청 종합건설본부",
+        "sources": [
+          {
+            "page": "알림마당",
+            "url": "https://www.incheon.go.kr/jonggeon/JO020101",
+            "sheet": "주요관청"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "region": "광주광역시",
+    "subEntities": [
+      {
+        "name": "광주시청",
+        "sources": [
+          {
+            "page": "고시 공고",
+            "url": "https://www.gwangju.go.kr/contentsView.do?pageId=www791",
+            "sheet": "주요관청"
+          }
+        ]
+      },
+      {
+        "name": "광주도시공사",
+        "sources": [
+          {
+            "page": "공고",
+            "url": "https://www.gmcc.co.kr/board.es?mid=a10402000000&bid=0018",
+            "sheet": "주요관청"
+          }
+        ]
+      },
+      {
+        "name": "광주시청 도시건설본부",
+        "sources": [
+          {
+            "page": "새소식",
+            "url": "https://www.gwangju.go.kr/build/boardList.do?boardId=BD_0000000156&amp;pageId=build9",
+            "sheet": "주요관청"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "region": "대전광역시",
+    "subEntities": [
+      {
+        "name": "대전시청",
+        "sources": [
+          {
+            "page": "고시 공고",
+            "url": "https://www.daejeon.go.kr/drh/drhGosiList.do?gosigbn=A&menuSeq=1908",
+            "sheet": "주요관청"
+          }
+        ]
+      },
+      {
+        "name": "대전지방국토관리청",
+        "sources": [
+          {
+            "page": "알림마당",
+            "url": "http://www.molit.go.kr/drocm/USR/BORD0201/m_16064/BRD.jsp",
+            "sheet": "주요관청"
+          }
+        ]
+      },
+      {
+        "name": "논산 국토관리사무소",
+        "sources": [
+          {
+            "page": "공지사항",
+            "url": "http://www.molit.go.kr/drocm/USR/BORD0201/m_20242/LST.jsp",
+            "sheet": "주요관청"
+          }
+        ]
+      },
+      {
+        "name": "충주 국토관리사무소",
+        "sources": [
+          {
+            "page": "공지사항",
+            "url": "http://www.molit.go.kr/drocm/USR/BORD0201/m_20318/LST.jsp",
+            "sheet": "주요관청"
+          }
+        ]
+      },
+      {
+        "name": "보은 국토관리사무소",
+        "sources": [
+          {
+            "page": "공지사항",
+            "url": "http://www.molit.go.kr/drocm/USR/BORD0201/m_20398/LST.jsp",
+            "sheet": "주요관청"
+          }
+        ]
+      },
+      {
+        "name": "예산 국토관리사무소",
+        "sources": [
+          {
+            "page": "공지사항",
+            "url": "http://www.molit.go.kr/drocm/USR/BORD0201/m_20474/LST.jsp",
+            "sheet": "주요관청"
+          }
+        ]
+      },
+      {
+        "name": "대전시청 건설관리본부",
+        "sources": [
+          {
+            "page": "공지사항",
+            "url": "https://www.daejeon.go.kr/gun/GunNoticeList.do?menuSeq=397",
+            "sheet": "주요관청"
+          }
+        ]
+      },
+      {
+        "name": "대전도시공사",
+        "sources": [
+          {
+            "page": "공지사항",
+            "url": "https://www.dcco.kr/web/board/list.do?mId=113",
+            "sheet": "주요관청"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "region": "울산광역시",
+    "subEntities": [
+      {
+        "name": "울산도시공사",
+        "sources": [
+          {
+            "page": "공지사항",
+            "url": "https://www.umca.co.kr/umca/bbs/list.do?bbsId=BBS_0000000000000001&mId=001001001000000000",
+            "sheet": "주요관청"
+          }
+        ]
+      },
+      {
+        "name": "울산시청",
+        "sources": [
+          {
+            "page": "고시 공고",
+            "url": "https://www.ulsan.go.kr/u/rep/transfer/notice/list.ulsan?mId=001004002000000000",
+            "sheet": "주요관청"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "region": "창원시",
+    "subEntities": [
+      {
+        "name": "창원시청",
+        "sources": [
+          {
+            "page": "고시 공고",
+            "url": "https://www.changwon.go.kr/cwportal/10310/10438/10439.web",
+            "sheet": "주요관청"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "region": "제주도",
+    "subEntities": [
+      {
+        "name": "제주도청",
+        "sources": [
+          {
+            "page": "고시 공고",
+            "url": "http://www.jeju.go.kr/news/news/law/jeju.htm",
+            "sheet": "주요관청"
+          }
+        ]
+      },
+      {
+        "name": "제주시청",
+        "sources": [
+          {
+            "page": "고시 공고",
+            "url": "https://www.jejusi.go.kr/information/intro/notice.do",
+            "sheet": "주요관청"
+          }
+        ]
+      },
+      {
+        "name": "서귀포시청",
+        "sources": [
+          {
+            "page": "고시 공고",
+            "url": "https://seogwipo.go.kr/info/news/law/law.htm",
+            "sheet": "주요관청"
+          }
+        ]
+      },
+      {
+        "name": "제주도개발공사",
+        "sources": [
+          {
+            "page": "공지사항",
+            "url": "https://www.jpdc.co.kr/open/news/notice.htm",
+            "sheet": "주요관청"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "region": "세종특별시",
+    "subEntities": [
+      {
+        "name": "세종도시교통공사",
+        "sources": [
+          {
+            "page": "알림마당",
+            "url": "https://www.sctc.kr/bbs/BBSS1612021757537630",
+            "sheet": "주요관청"
+          }
+        ]
+      },
+      {
+        "name": "세종시청",
+        "sources": [
+          {
+            "page": "공지사항",
+            "url": "https://www.sejong.go.kr/bbs/R0071/list.do",
+            "sheet": "주요관청"
+          },
+          {
+            "page": "고시 공고",
+            "url": "https://www.sejong.go.kr/prog/publicNotice/kor/sub02_0303/C1/list.do",
+            "sheet": "주요관청"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "region": "경기도",
+    "subEntities": [
+      {
+        "name": "경기도시공사",
+        "sources": [
+          {
+            "page": "고시 공고",
+            "url": "https://www.gh.or.kr/gh/bid-announcement.do",
+            "sheet": "주요관청"
+          }
+        ]
+      },
+      {
+        "name": "경기도청",
+        "sources": [
+          {
+            "page": "공시 공고",
+            "url": "https://www.gg.go.kr/bbs/board.do?bsIdx=469&menuId=1547",
+            "sheet": "주요관청"
+          }
+        ]
+      },
+      {
+        "name": "성남시청",
+        "sources": [
+          {
+            "page": "공시 공고",
+            "url": "https://www.seongnam.go.kr/notice/publicNotice.do?menuIdx=1000499&amp;returnURL=%2Fmain.do",
+            "sheet": "주요관청"
+          }
+        ]
+      },
+      {
+        "name": "고양시청",
+        "sources": [
+          {
+            "page": "고시 공고",
+            "url": "https://www.goyang.go.kr/www/link/BD_bidding.do",
+            "sheet": "주요관청"
+          }
+        ]
+      },
+      {
+        "name": "남양주시청",
+        "sources": [
+          {
+            "page": "고시 공고",
+            "url": "https://www.nyj.go.kr/main/185",
+            "sheet": "주요관청"
+          }
+        ]
+      },
+      {
+        "name": "부천시청",
+        "sources": [
+          {
+            "page": "기타공고",
+            "url": "https://www.bucheon.go.kr/site/program/board/basicboard/list?boardtypeid=26754&menuid=148002003002",
+            "sheet": "주요관청"
+          }
+        ]
+      },
+      {
+        "name": "수원시청",
+        "sources": [
+          {
+            "page": "공고 공시 입법예고",
+            "url": "https://www.suwon.go.kr/sw-www/www04/www04-06.jsp",
+            "sheet": "주요관청"
+          }
+        ]
+      },
+      {
+        "name": "시흥시청",
+        "sources": [
+          {
+            "page": "고시 공고",
+            "url": "https://www.siheung.go.kr/main/saeol/gosi/list.do?mId=0401040100",
+            "sheet": "주요관청"
+          }
+        ]
+      },
+      {
+        "name": "안산시청",
+        "sources": [
+          {
+            "page": "고시 공고",
+            "url": "https://www.ansan.go.kr/www/common/cntnts/selectContents.do?cntnts_id=C0001209",
+            "sheet": "주요관청"
+          }
+        ]
+      },
+      {
+        "name": "안양시청",
+        "sources": [
+          {
+            "page": "고시 공고",
+            "url": "https://www.anyang.go.kr/main/emwsWebList.do?key=4101&searchGosiSe=01,03,04",
+            "sheet": "주요관청"
+          }
+        ]
+      },
+      {
+        "name": "용인시청",
+        "sources": [
+          {
+            "page": "입찰공고",
+            "url": "http://www.yongin.go.kr/home/yiNw/yiNwInfo/yiNwInfo01/yiNwInfo01_01.jsp;jsessionid=sV1oqCCKq3qsIrTZaZ3vmVaaWNaTwhFuYTFOTzRUVrpSoddkbTPBHoh8iXNRbDXu.yonginwas_servlet_engine3",
+            "sheet": "주요관청"
+          },
+          {
+            "page": "공법선정위원회",
+            "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbsList.do?q_bbsCode=1156",
+            "sheet": "주요관청"
+          }
+        ]
+      },
+      {
+        "name": "의정부시청",
+        "sources": [
+          {
+            "page": "고시 공고",
+            "url": "https://www.ui4u.go.kr/portal/saeol/gosiList.do?seCode=01&amp;mId=0301040000",
+            "sheet": "주요관청"
+          }
+        ]
+      },
+      {
+        "name": "평택시청",
+        "sources": [
+          {
+            "page": "고시 공고",
+            "url": "https://www.pyeongtaek.go.kr/pyeongtaek/saeol/gosiList.do?seCode=01&mId=0401020000",
+            "sheet": "주요관청"
+          }
+        ]
+      },
+      {
+        "name": "화성시청",
+        "sources": [
+          {
+            "page": "공고 고시",
+            "url": "https://www.hscity.go.kr/www/link/BD_notice.do",
+            "sheet": "주요관청"
+          }
+        ]
+      },
+      {
+        "name": "가평군",
+        "sources": [
+          {
+            "page": "고시 공고",
+            "url": "https://www.gp.go.kr/portal/selectGosiList.do?key=2148&not_ancmt_se_code=01",
+            "sheet": "주요관청"
+          }
+        ]
+      },
+      {
+        "name": "과천시",
+        "sources": [
+          {
+            "page": "고시 공고",
+            "url": "https://www.gccity.go.kr/portal/saeol/gosi/list.do?mId=0301040000",
+            "sheet": "주요관청"
+          }
+        ]
+      },
+      {
+        "name": "광명시",
+        "sources": [
+          {
+            "page": "공고 공시 입법예고",
+            "url": "https://www.gm.go.kr/pt/user/nftcBbs/BD_selectNftcBbsList.do?q_nftcBbsCode=1001&q_nftcBbsMgtno=&q_searchKeyTy=&q_searchVal=&q_rowPerPage=&q_currPage=1&q_sortName=&q_sortOrder=",
+            "sheet": "주요관청"
+          }
+        ]
+      },
+      {
+        "name": "광주시",
+        "sources": [
+          {
+            "page": "고시 공고",
+            "url": "https://www.gjcity.go.kr/portal/saeol/gosi/list.do?mId=0202010000",
+            "sheet": "주요관청"
+          }
+        ]
+      },
+      {
+        "name": "구리시",
+        "sources": [
+          {
+            "page": "고시 공고",
+            "url": "https://www.guri.go.kr/www/selectGosiNttList.do?key=387&searchGosiSe=01,04,06",
+            "sheet": "주요관청"
+          }
+        ]
+      },
+      {
+        "name": "군포시",
+        "sources": [
+          {
+            "page": "고시 공고",
+            "url": "http://www.gunpo.go.kr/www/selectEminwonList.do?key=3907&Not_ancmt_se_code=01,04&list_gubun=N&ofr_pageSize=10",
+            "sheet": "주요관청"
+          }
+        ]
+      },
+      {
+        "name": "동두천시",
+        "sources": [
+          {
+            "page": "고시 공고",
+            "url": "https://www.ddc.go.kr/ddc/selectGosiList.do?key=340&not_ancmt_se_code=04",
+            "sheet": "주요관청"
+          }
+        ]
+      },
+      {
+        "name": "김포시",
+        "sources": [
+          {
+            "page": "고시 공고",
+            "url": "https://www.gimpo.go.kr/portal/ntfcPblancList.do?key=1004&cate_cd=1&searchCnd=40900000000",
+            "sheet": "주요관청"
+          }
+        ]
+      },
+      {
+        "name": "안성시",
+        "sources": [
+          {
+            "page": "고시 공고",
+            "url": "https://www.anseong.go.kr/portal/saeol/gosiList.do?mId=0501040000&token=1756787712150",
+            "sheet": "주요관청"
+          }
+        ]
+      },
+      {
+        "name": "양주시",
+        "sources": [
+          {
+            "page": "고시 공고",
+            "url": "https://www.yangju.go.kr/www/contents.do?key=211",
+            "sheet": "주요관청"
+          }
+        ]
+      },
+      {
+        "name": "양평군",
+        "sources": [
+          {
+            "page": "고시 공고",
+            "url": "https://www.yp21.go.kr/www/selectBbsNttList.do?bbsNo=5&key=1119",
+            "sheet": "주요관청"
+          }
+        ]
+      },
+      {
+        "name": "여주시",
+        "sources": [
+          {
+            "page": "공고 공시 입법예고",
+            "url": "https://www.yeoju.go.kr/www/selectBbsNttList.do?bbsNo=28&key=354",
+            "sheet": "주요관청"
+          }
+        ]
+      },
+      {
+        "name": "연천군",
+        "sources": [
+          {
+            "page": "고시 공고",
+            "url": "https://www.yeoncheon.go.kr/www/selectGosiList.do?key=3393&not_ancmt_se_code=01",
+            "sheet": "주요관청"
+          }
+        ]
+      },
+      {
+        "name": "오산시",
+        "sources": [
+          {
+            "page": "고시 공고",
+            "url": "https://www.osan.go.kr/portal/saeol/gosi/list.do?mId=0302010000",
+            "sheet": "주요관청"
+          }
+        ]
+      },
+      {
+        "name": "의왕시",
+        "sources": [
+          {
+            "page": "고시 공고",
+            "url": "http://www.uiwang.go.kr/UWKORINFO0701",
+            "sheet": "주요관청"
+          }
+        ]
+      },
+      {
+        "name": "이천시",
+        "sources": [
+          {
+            "page": "고시 공고",
+            "url": "https://www.icheon.go.kr/portal/saeol/gosi/list.do?seCode=04&mid=0402020000&token=1756788219515",
+            "sheet": "주요관청"
+          }
+        ]
+      },
+      {
+        "name": "파주시",
+        "sources": [
+          {
+            "page": "고시 공고",
+            "url": "https://www.paju.go.kr/user/board/BD_board.list.do?bbsCd=1022&q_ctgCd=4063",
+            "sheet": "주요관청"
+          }
+        ]
+      },
+      {
+        "name": "포천시",
+        "sources": [
+          {
+            "page": "고시 공고",
+            "url": "https://www.pocheon.go.kr/www/selectEminwonList.do?key=12563&notAncmtSeCode=01",
+            "sheet": "주요관청"
+          }
+        ]
+      },
+      {
+        "name": "하남시",
+        "sources": [
+          {
+            "page": "고시 공고",
+            "url": "https://www.hanam.go.kr/www/selectGosiList.do?key=171&not_ancmt_se_code=01,03,04",
+            "sheet": "주요관청"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "region": "충청북도",
+    "subEntities": [
+      {
+        "name": "충북개발공사",
+        "sources": [
+          {
+            "page": "공지사항",
+            "url": "https://www.cbdc.co.kr/zboard/list.do?lmCode=BBSMSTR_000000000018",
+            "sheet": "주요관청"
+          }
+        ]
+      },
+      {
+        "name": "충북도청 도로관리사업소",
+        "sources": [
+          {
+            "page": "공지사항",
+            "url": "https://www.chungbuk.go.kr/road/selectBbsNttList.do?bbsNo=292&key=1975",
+            "sheet": "주요관청"
+          }
+        ]
+      },
+      {
+        "name": "충북도청",
+        "sources": [
+          {
+            "page": "고시 공고",
+            "url": "https://www.chungbuk.go.kr/www/contents.do?key=422",
+            "sheet": "주요관청"
+          }
+        ]
+      },
+      {
+        "name": "청주시",
+        "sources": [
+          {
+            "page": "공지사항",
+            "url": "https://www.cheongju.go.kr/www/selectBbsNttList.do?bbsNo=510&key=280&integrDeptCode=000100101",
+            "sheet": "시-도"
+          },
+          {
+            "page": "고시/공고",
+            "url": "https://www.cheongju.go.kr/www/contents.do?key=281",
+            "sheet": "시-도"
+          }
+        ]
+      },
+      {
+        "name": "청주시-상당구",
+        "sources": [
+          {
+            "page": "공지사항",
+            "url": "https://www.cheongju.go.kr/sangdang/selectBbsNttList.do?bbsNo=511&key=1018&integrDeptCode=000100186",
+            "sheet": "시-도"
+          },
+          {
+            "page": "고시/공고",
+            "url": "https://www.cheongju.go.kr/sangdang/contents.do?key=1020",
+            "sheet": "시-도"
+          }
+        ]
+      },
+      {
+        "name": "청주시-서원구",
+        "sources": [
+          {
+            "page": "공지사항",
+            "url": "https://www.cheongju.go.kr/seowon/selectBbsNttList.do?bbsNo=513&key=1194&integrDeptCode=000100209",
+            "sheet": "시-도"
+          },
+          {
+            "page": "고시/공고",
+            "url": "https://www.cheongju.go.kr/seowon/contents.do?key=1196",
+            "sheet": "시-도"
+          }
+        ]
+      },
+      {
+        "name": "청주시-흥덕구",
+        "sources": [
+          {
+            "page": "공지사항",
+            "url": "https://www.cheongju.go.kr/heungdeok/selectBbsNttList.do?bbsNo=512&key=1889&integrDeptCode=000100230",
+            "sheet": "시-도"
+          },
+          {
+            "page": "고시/공고",
+            "url": "https://www.cheongju.go.kr/heungdeok/contents.do?key=1891",
+            "sheet": "시-도"
+          }
+        ]
+      },
+      {
+        "name": "청주시-청원구",
+        "sources": [
+          {
+            "page": "공지사항",
+            "url": "https://www.cheongju.go.kr/cheongwon/selectBbsNttList.do?bbsNo=514&key=1309&integrDeptCode=000100251",
+            "sheet": "시-도"
+          },
+          {
+            "page": "고시/공고",
+            "url": "https://www.cheongju.go.kr/cheongwon/contents.do?key=1311",
+            "sheet": "시-도"
+          }
+        ]
+      },
+      {
+        "name": "제천시",
+        "sources": [
+          {
+            "page": "공지사항",
+            "url": "https://www.jecheon.go.kr/www/selectBbsNttList.do?bbsNo=11&key=114",
+            "sheet": "시-도"
+          },
+          {
+            "page": "고시/공고",
+            "url": "https://www.jecheon.go.kr/www/selectBbsNttList.do?bbsNo=18&key=5233",
+            "sheet": "시-도"
+          }
+        ]
+      },
+      {
+        "name": "충주시",
+        "sources": [
+          {
+            "page": "공지사항",
+            "url": "https://www.chungju.go.kr/www/selectBbsNttList.do?key=506&bbsNo=5",
+            "sheet": "시-도"
+          },
+          {
+            "page": "고시/공고",
+            "url": "https://www.chungju.go.kr/www/selectEminwonList.do?key=510&ofr_pageSize=10&ancmt_se_code=01,02,04&pageIndex=1",
+            "sheet": "시-도"
+          }
+        ]
+      },
+      {
+        "name": "음성군",
+        "sources": [
+          {
+            "page": "공지사항",
+            "url": "https://www.eumseong.go.kr/www/selectBbsNttList.do?bbsNo=6&key=78",
+            "sheet": "시-도"
+          },
+          {
+            "page": "고시/공고",
+            "url": "https://www.eumseong.go.kr/www/selectEminwonList.do?key=80&pageUnit=10&ofr_pageSize=10&amp;not_ancmt_se_code=01,02,03,04,05&pageIndex=1",
+            "sheet": "시-도"
+          }
+        ]
+      },
+      {
+        "name": "진천군",
+        "sources": [
+          {
+            "page": "공지사항",
+            "url": "https://www.jincheon.go.kr/home/sub.do?menukey=2908",
+            "sheet": "시-도"
+          },
+          {
+            "page": "고시/공고",
+            "url": "https://www.jincheon.go.kr/home/sub.do?menukey=2449",
+            "sheet": "시-도"
+          }
+        ]
+      },
+      {
+        "name": "옥천군",
+        "sources": [
+          {
+            "page": "공지사항",
+            "url": "https://www.oc.go.kr/www/selectBbsNttList.do?bbsNo=36&key=232&",
+            "sheet": "시-도"
+          },
+          {
+            "page": "고시/공고",
+            "url": "https://www.oc.go.kr/www/selectBbsNttList.do?bbsNo=40&key=236&",
+            "sheet": "시-도"
+          }
+        ]
+      },
+      {
+        "name": "영동군",
+        "sources": [
+          {
+            "page": "공지사항",
+            "url": "https://yd21.go.kr/kr/html/sub02/020101.html",
+            "sheet": "시-도"
+          },
+          {
+            "page": "고시/공고",
+            "url": "https://yd21.go.kr/kr/html/sub02/020103.html",
+            "sheet": "시-도"
+          }
+        ]
+      },
+      {
+        "name": "증평군",
+        "sources": [
+          {
+            "page": "공지사항",
+            "url": "https://www.jp.go.kr/kor/cop/bbs/BBSMSTR_000000000134/selectBoardList.do",
+            "sheet": "시-도"
+          },
+          {
+            "page": "고시/공고",
+            "url": "http://www.jp.go.kr/kor/sub03_01_03.do",
+            "sheet": "시-도"
+          }
+        ]
+      },
+      {
+        "name": "괴산군",
+        "sources": [
+          {
+            "page": "공지사항",
+            "url": "https://www.goesan.go.kr/www/selectBbsNttList.do?key=135&bbsNo=190",
+            "sheet": "시-도"
+          },
+          {
+            "page": "고시/공고",
+            "url": "https://www.goesan.go.kr/www/selectBbsNttList.do?bbsNo=214&key=137",
+            "sheet": "시-도"
+          }
+        ]
+      },
+      {
+        "name": "보은군",
+        "sources": [
+          {
+            "page": "공지사항",
+            "url": "https://www.boeun.go.kr/www/selectBbsNttList.do?bbsNo=4&key=800",
+            "sheet": "시-도"
+          },
+          {
+            "page": "고시/공고",
+            "url": "https://www.boeun.go.kr/www/selectBbsNttList.do?bbsNo=66&key=2262",
+            "sheet": "시-도"
+          }
+        ]
+      },
+      {
+        "name": "단양군",
+        "sources": [
+          {
+            "page": "공지사항",
+            "url": "https://www.danyang.go.kr/dy21/975",
+            "sheet": "시-도"
+          },
+          {
+            "page": "고시/공고",
+            "url": "https://www.danyang.go.kr/dy21/976",
+            "sheet": "시-도"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "region": "충청남도",
+    "subEntities": [
+      {
+        "name": "충남도청",
+        "sources": [
+          {
+            "page": "고시 공고",
+            "url": "http://www.chungnam.go.kr/cnnet/board.do?mnu_cd=CNNMENU02364",
+            "sheet": "주요관청"
+          }
+        ]
+      },
+      {
+        "name": "충남개발공사",
+        "sources": [
+          {
+            "page": "공지사항",
+            "url": "https://www.cndc.kr/home/board/brdList.do?menu_cd=000065",
+            "sheet": "주요관청"
+          }
+        ]
+      },
+      {
+        "name": "금강유역환경청",
+        "sources": [
+          {
+            "page": "알림마당",
+            "url": "https://me.go.kr/gg/web/index.do?menuId=2282",
+            "sheet": "주요관청"
+          }
+        ]
+      },
+      {
+        "name": "충남도청 종합건설사업소",
+        "sources": [
+          {
+            "page": "공지사항",
+            "url": "http://www.chungnam.go.kr:8100/orga/board.do?mnu_cd=TCIMENU00041",
+            "sheet": "주요관청"
+          }
+        ]
+      },
+      {
+        "name": "아산시",
+        "sources": [
+          {
+            "page": "고시공고",
+            "url": "https://www.asan.go.kr/main/cms/?no=257",
+            "sheet": "시-도"
+          },
+          {
+            "page": "공지사항",
+            "url": "https://www.asan.go.kr/main/cms/?no=131",
+            "sheet": "시-도"
+          }
+        ]
+      },
+      {
+        "name": "천안시",
+        "sources": [
+          {
+            "page": "행정공고/고시",
+            "url": "https://www.cheonan.go.kr/kor/sub02_03_01.do",
+            "sheet": "시-도"
+          },
+          {
+            "page": "공지사항",
+            "url": "https://www.cheonan.go.kr/cop/bbs/BBSMSTR_000000000462/selectBoardList.do",
+            "sheet": "시-도"
+          }
+        ]
+      },
+      {
+        "name": "서산시",
+        "sources": [
+          {
+            "page": "공고/고시",
+            "url": "https://www.seosan.go.kr/www/contents.do?key=1258",
+            "sheet": "시-도"
+          },
+          {
+            "page": "공지사항",
+            "url": "https://www.seosan.go.kr/www/selectBbsNttList.do?bbsNo=97&key=1256",
+            "sheet": "시-도"
+          }
+        ]
+      },
+      {
+        "name": "당진시",
+        "sources": [
+          {
+            "page": "고시/공고",
+            "url": "https://www.dangjin.go.kr/kor/sub03_02_01_01.do",
+            "sheet": "시-도"
+          },
+          {
+            "page": "공지사항",
+            "url": "https://www.dangjin.go.kr/cop/bbs/BBSMSTR_000000000013/selectBoardList.do",
+            "sheet": "시-도"
+          }
+        ]
+      },
+      {
+        "name": "논산시",
+        "sources": [
+          {
+            "page": "공고/고시",
+            "url": "https://www.nonsan.go.kr/kor/html/sub03/030102.html",
+            "sheet": "시-도"
+          },
+          {
+            "page": "공지사항",
+            "url": "https://www.nonsan.go.kr/kor/html/sub03/030101.html",
+            "sheet": "시-도"
+          }
+        ]
+      },
+      {
+        "name": "공주시",
+        "sources": [
+          {
+            "page": "공지사항",
+            "url": "https://www.gongju.go.kr/bbs/BBSMSTR_000000000813/list.do",
+            "sheet": "시-도"
+          },
+          {
+            "page": "고시",
+            "url": "https://www.gongju.go.kr/prog/saeolGosi/GOSI_01/sub04_03_01/list.do",
+            "sheet": "시-도"
+          }
+        ]
+      },
+      {
+        "name": "홍성군",
+        "sources": [
+          {
+            "page": "공지사항",
+            "url": "https://www.hongseong.go.kr/prog/bbsArticle/BBSMSTR_000000000841/list.do",
+            "sheet": "시-도"
+          },
+          {
+            "page": "고시/공고",
+            "url": "https://www.hongseong.go.kr/prog/saeolGosi/kor/sub03_0204/GOSI_ALL/list.do",
+            "sheet": "시-도"
+          }
+        ]
+      },
+      {
+        "name": "보령시",
+        "sources": [
+          {
+            "page": "공지사항",
+            "url": "https://www.brcn.go.kr/cop/bbs/BBSMSTR_000000000263/selectBoardList.do",
+            "sheet": "시-도"
+          },
+          {
+            "page": "고시/공고",
+            "url": "https://www.brcn.go.kr/prog/eminwon/kor/BB/sub04_03_01/list.do",
+            "sheet": "시-도"
+          }
+        ]
+      },
+      {
+        "name": "예산군",
+        "sources": [
+          {
+            "page": "공지사항",
+            "url": "https://www.yesan.go.kr/cop/bbs/BBSMSTR_000000000061/selectBoardList.do",
+            "sheet": "시-도"
+          },
+          {
+            "page": "고시/공고",
+            "url": "https://www.yesan.go.kr/kor/sub02_01_05.do",
+            "sheet": "시-도"
+          }
+        ]
+      },
+      {
+        "name": "부여군",
+        "sources": [
+          {
+            "page": "공지사항",
+            "url": "https://www.buyeo.go.kr/_prog/_board/?code=news_01&site_dvs_cd=kr&menu_dvs_cd=0401",
+            "sheet": "시-도"
+          },
+          {
+            "page": "고시/공고",
+            "url": "https://www.buyeo.go.kr/_prog/_board/?code=news_02&site_dvs_cd=kr&menu_dvs_cd=040205",
+            "sheet": "시-도"
+          }
+        ]
+      },
+      {
+        "name": "태안군",
+        "sources": [
+          {
+            "page": "공지사항",
+            "url": "https://www.taean.go.kr/cop/bbs/BBSMSTR_000000000036/selectBoardList.do",
+            "sheet": "시-도"
+          },
+          {
+            "page": "고시/공고",
+            "url": "http://www.taean.go.kr/kor/sub02_03_01.do",
+            "sheet": "시-도"
+          }
+        ]
+      },
+      {
+        "name": "서천군",
+        "sources": [
+          {
+            "page": "공지사항",
+            "url": "https://www.seocheon.go.kr/cop/bbs/BBSMSTR_000000000056/selectBoardList.do",
+            "sheet": "시-도"
+          },
+          {
+            "page": "일반공고",
+            "url": "http://www.seocheon.go.kr/kor/sub04_06_03.do",
+            "sheet": "시-도"
+          }
+        ]
+      },
+      {
+        "name": "금산군",
+        "sources": [
+          {
+            "page": "공지사항",
+            "url": "https://www.geumsan.go.kr/kr/html/sub03/030101.html",
+            "sheet": "시-도"
+          },
+          {
+            "page": "고시/공고",
+            "url": "https://www.geumsan.go.kr/kr/html/sub03/030302.html",
+            "sheet": "시-도"
+          }
+        ]
+      },
+      {
+        "name": "계룡시",
+        "sources": [
+          {
+            "page": "공지사항",
+            "url": "https://www.gyeryong.go.kr/kr/html/sub03/030101.html",
+            "sheet": "시-도"
+          },
+          {
+            "page": "고시/공고",
+            "url": "https://www.gyeryong.go.kr/kr/html/sub03/030102.html",
+            "sheet": "시-도"
+          }
+        ]
+      },
+      {
+        "name": "청양군",
+        "sources": [
+          {
+            "page": "공지사항",
+            "url": "http://www.cheongyang.go.kr/cop/bbs/BBSMSTR_000000000037/selectBoardList.do",
+            "sheet": "시-도"
+          },
+          {
+            "page": "고시/공고",
+            "url": "http://www.cheongyang.go.kr/kor/sub04_02_03.do",
+            "sheet": "시-도"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "region": "경상북도",
+    "subEntities": [
+      {
+        "name": "경북도청",
+        "sources": [
+          {
+            "page": "고시 공고",
+            "url": "https://www.gb.go.kr/Main/page.do?mnu_uid=6789&&BD_CODE=gosi_notice",
+            "sheet": "주요관청"
+          }
+        ]
+      },
+      {
+        "name": "경상북도 북부건설사업소",
+        "sources": [
+          {
+            "page": "고시 공고",
+            "url": "https://gb.go.kr/Main/open_contents/section/gunsul/page.do?mnu_uid=6046&",
+            "sheet": "주요관청"
+          }
+        ]
+      },
+      {
+        "name": "경북개발공사",
+        "sources": [
+          {
+            "page": "공지사항",
+            "url": "https://www.gbdc.co.kr/boardlist.do?seqId=0000003726",
+            "sheet": "주요관청"
+          }
+        ]
+      },
+      {
+        "name": "포항시",
+        "sources": [
+          {
+            "page": "공지사항",
+            "url": "https://www.pohang.go.kr/portal/board/post/list.do?bcIdx=100&mid=0201010000&token=1765268885922",
+            "sheet": "시-도"
+          },
+          {
+            "page": "고시/공고",
+            "url": "https://www.pohang.go.kr/portal/saeol/gosi/list.do?mid=0202010000&token=1765268907219",
+            "sheet": "시-도"
+          }
+        ]
+      },
+      {
+        "name": "경주시",
+        "sources": [
+          {
+            "page": "공지사항",
+            "url": "https://www.gyeongju.go.kr/open_content/ko/page.do?mnu_uid=416&",
+            "sheet": "시-도"
+          },
+          {
+            "page": "고시/공고",
+            "url": "https://www.gyeongju.go.kr/open_content/ko/page.do?mnu_uid=423&",
+            "sheet": "시-도"
+          }
+        ]
+      },
+      {
+        "name": "안동시",
+        "sources": [
+          {
+            "page": "공지사항",
+            "url": "https://www.andong.go.kr/portal/bbs/list.do?ptIdx=156&mId=0401010000",
+            "sheet": "시-도"
+          },
+          {
+            "page": "고시/공고",
+            "url": "https://www.andong.go.kr/portal/saeol/gosi/list.do?mId=0401020100",
+            "sheet": "시-도"
+          }
+        ]
+      },
+      {
+        "name": "김천시",
+        "sources": [
+          {
+            "page": "공지사항",
+            "url": "https://www.gc.go.kr/portal/bbs/list.do?ptIdx=1807&mId=1202090100",
+            "sheet": "시-도"
+          },
+          {
+            "page": "고시/공고",
+            "url": "https://www.gc.go.kr/portal/saeol/gosi/list.do?mId=1202180100",
+            "sheet": "시-도"
+          }
+        ]
+      },
+      {
+        "name": "구미시",
+        "sources": [
+          {
+            "page": "공지사항",
+            "url": "https://www.gumi.go.kr/portal/board/post/list.do?bcIdx=1&mid=0401020000&token=1765269213631",
+            "sheet": "시-도"
+          },
+          {
+            "page": "고시/공고",
+            "url": "https://www.gumi.go.kr/portal/saeol/gosi/list.do?seCode=01&mid=0401040000&token=1765269238615",
+            "sheet": "시-도"
+          }
+        ]
+      },
+      {
+        "name": "영주시",
+        "sources": [
+          {
+            "page": "공지사항",
+            "url": "https://yeongju.go.kr/open_content/main/page.do?mnu_uid=1521",
+            "sheet": "시-도"
+          },
+          {
+            "page": "고시/공고",
+            "url": "https://yeongju.go.kr/open_content/main/page.do?mnu_uid=10619&",
+            "sheet": "시-도"
+          }
+        ]
+      },
+      {
+        "name": "영천시",
+        "sources": [
+          {
+            "page": "공지사항",
+            "url": "https://www.yc.go.kr/portal/bbs/list.do?ptIdx=544&mId=0301010000",
+            "sheet": "시-도"
+          },
+          {
+            "page": "고시/공고",
+            "url": "https://www.yc.go.kr/portal/saeol/gosi/list.do?mId=0301040000",
+            "sheet": "시-도"
+          }
+        ]
+      },
+      {
+        "name": "상주시",
+        "sources": [
+          {
+            "page": "공지사항",
+            "url": "https://www.sangju.go.kr/board/list.tc?mn=3032&mngNo=726&pageSeq=2613",
+            "sheet": "시-도"
+          },
+          {
+            "page": "고시/공고",
+            "url": "https://www.sangju.go.kr/page/10297/10606.tc",
+            "sheet": "시-도"
+          }
+        ]
+      },
+      {
+        "name": "문경시",
+        "sources": [
+          {
+            "page": "공지사항",
+            "url": "https://www.gbmg.go.kr/portal/bbs/list.do?ptIdx=73&mId=0301010000",
+            "sheet": "시-도"
+          },
+          {
+            "page": "고시/공고",
+            "url": "https://www.gbmg.go.kr/portal/saeol/gosi/list.do?mId=0301060000",
+            "sheet": "시-도"
+          }
+        ]
+      },
+      {
+        "name": "경산시",
+        "sources": [
+          {
+            "page": "공지사항",
+            "url": "https://www.gbgs.go.kr/open_content/ko/page.do?mnu_uid=2159",
+            "sheet": "시-도"
+          },
+          {
+            "page": "고시/공고",
+            "url": "https://www.gbgs.go.kr/open_content/ko/page.do?mnu_uid=2160&",
+            "sheet": "시-도"
+          }
+        ]
+      },
+      {
+        "name": "군위군",
+        "sources": [
+          {
+            "page": "공지사항",
+            "url": "https://www.gunwi.go.kr/ko/page.do?mnu_uid=166&",
+            "sheet": "시-도"
+          },
+          {
+            "page": "고시/공고",
+            "url": "https://www.gunwi.go.kr/ko/page.do?mnu_uid=170&",
+            "sheet": "시-도"
+          }
+        ]
+      },
+      {
+        "name": "의성군",
+        "sources": [
+          {
+            "page": "공지사항",
+            "url": "https://www.usc.go.kr/board/list.tc?mn=1275&mngNo=275&pageSeq=1314",
+            "sheet": "시-도"
+          },
+          {
+            "page": "고시/공고",
+            "url": "https://www.usc.go.kr/gosi/list.tc?mn=1271&pageSeq=1217",
+            "sheet": "시-도"
+          }
+        ]
+      },
+      {
+        "name": "청송군",
+        "sources": [
+          {
+            "page": "공지사항",
+            "url": "https://www.cs.go.kr/news/00002679/00002687.web",
+            "sheet": "시-도"
+          },
+          {
+            "page": "고시/공고",
+            "url": "https://www.cs.go.kr/news/00002679/00006203.web",
+            "sheet": "시-도"
+          }
+        ]
+      },
+      {
+        "name": "영양군",
+        "sources": [
+          {
+            "page": "공지사항",
+            "url": "https://www.yyg.go.kr/www/organization/yyg_news/notice",
+            "sheet": "시-도"
+          },
+          {
+            "page": "고시/공고",
+            "url": "https://www.yyg.go.kr/www/organization/yyg_news/notification",
+            "sheet": "시-도"
+          }
+        ]
+      },
+      {
+        "name": "영덕군",
+        "sources": [
+          {
+            "page": "공지사항",
+            "url": "https://www.yd.go.kr/?page_id=752",
+            "sheet": "시-도"
+          },
+          {
+            "page": "고시/공고",
+            "url": "https://www.yd.go.kr/?page_id=763",
+            "sheet": "시-도"
+          }
+        ]
+      },
+      {
+        "name": "청도군",
+        "sources": [
+          {
+            "page": "공지사항",
+            "url": "https://www.cheongdo.go.kr/open.content/ko/administration/news/notice/",
+            "sheet": "시-도"
+          },
+          {
+            "page": "고시/공고",
+            "url": "https://www.cheongdo.go.kr/open.content/ko/administration/news/announcement/",
+            "sheet": "시-도"
+          }
+        ]
+      },
+      {
+        "name": "고령군",
+        "sources": [
+          {
+            "page": "공지사항",
+            "url": "http://www.goryeong.go.kr/kor/boardList.do?IDX=152&BRD_ID=1019",
+            "sheet": "시-도"
+          },
+          {
+            "page": "고시/공고",
+            "url": "http://www.goryeong.go.kr/kor/boardList.do?IDX=154&BRD_ID=1023",
+            "sheet": "시-도"
+          }
+        ]
+      },
+      {
+        "name": "성주군",
+        "sources": [
+          {
+            "page": "공지사항",
+            "url": "https://sj.go.kr/page.do?mnu_uid=1024",
+            "sheet": "시-도"
+          },
+          {
+            "page": "고시/공고",
+            "url": "https://sj.go.kr/page.do?mnu_uid=1044&",
+            "sheet": "시-도"
+          }
+        ]
+      },
+      {
+        "name": "칠곡군",
+        "sources": [
+          {
+            "page": "공지사항",
+            "url": "https://www.chilgok.go.kr/portal/bbs/list.do?ptIdx=111&mId=0201010000",
+            "sheet": "시-도"
+          },
+          {
+            "page": "고시/공고",
+            "url": "https://www.chilgok.go.kr/portal/saeol/gosi/list.do?mId=0201030000",
+            "sheet": "시-도"
+          }
+        ]
+      },
+      {
+        "name": "예천군",
+        "sources": [
+          {
+            "page": "공지사항",
+            "url": "https://www.ycg.kr/open.content/ko/administrative/news/notice/",
+            "sheet": "시-도"
+          },
+          {
+            "page": "고시/공고",
+            "url": "https://www.ycg.kr/open.content/ko/administrative/news/announcement/",
+            "sheet": "시-도"
+          }
+        ]
+      },
+      {
+        "name": "봉화군",
+        "sources": [
+          {
+            "page": "공지사항",
+            "url": "https://www.bonghwa.go.kr/open.content/ko/news/news/board/",
+            "sheet": "시-도"
+          },
+          {
+            "page": "고시/공고",
+            "url": "https://www.bonghwa.go.kr/open.content/ko/news/news/announcement/bonghwa/",
+            "sheet": "시-도"
+          }
+        ]
+      },
+      {
+        "name": "울진군",
+        "sources": [
+          {
+            "page": "공지사항",
+            "url": "http://www.uljin.go.kr/board/list.uljin?boardId=BBS_NOTICE_UJ&menuCd=DOM_000000103002001000&contentsSid=68&cpath=",
+            "sheet": "시-도"
+          },
+          {
+            "page": "고시/공고",
+            "url": "http://www.uljin.go.kr/index.uljin?menuCd=DOM_000000103002007000",
+            "sheet": "시-도"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "region": "경상남도",
+    "subEntities": [
+      {
+        "name": "경남도청",
+        "sources": [
+          {
+            "page": "고시 공고",
+            "url": "https://www.gyeongnam.go.kr/index.gyeong?menuCd=DOM_000000135003009001",
+            "sheet": "주요관청"
+          }
+        ]
+      },
+      {
+        "name": "경남개발공사",
+        "sources": [
+          {
+            "page": "공지사항",
+            "url": "http://www.gndc.co.kr/boardlist.do?seqId=0000000047",
+            "sheet": "주요관청"
+          }
+        ]
+      },
+      {
+        "name": "낙동강유역환경청",
+        "sources": [
+          {
+            "page": "공지사항",
+            "url": "https://me.go.kr/ndg/web/index.do?menuId=3282",
+            "sheet": "주요관청"
+          }
+        ]
+      },
+      {
+        "name": "경남도청 도로관리사업소",
+        "sources": [
+          {
+            "page": "열린마당",
+            "url": "https://www.gyeongnam.go.kr/board/list.gyeong?boardId=BBS_0000020&menuCd=DOM_000000704001000000",
+            "sheet": "주요관청"
+          }
+        ]
+      },
+      {
+        "name": "창원시",
+        "sources": [
+          {
+            "page": "공지사항",
+            "url": "https://www.changwon.go.kr/portal/bbs/list.do?ptIdx=100&mId=0201010000",
+            "sheet": "시-도"
+          },
+          {
+            "page": "고시/공고",
+            "url": "https://www.changwon.go.kr/portal/saeol/gosi/list.do?mId=0202010000",
+            "sheet": "시-도"
+          }
+        ]
+      },
+      {
+        "name": "진주시",
+        "sources": [
+          {
+            "page": "공지사항",
+            "url": "https://www.jinju.go.kr/00130/02730/00136.web",
+            "sheet": "시-도"
+          },
+          {
+            "page": "고시/공고",
+            "url": "https://www.jinju.go.kr/00130/02730/05586.web",
+            "sheet": "시-도"
+          }
+        ]
+      },
+      {
+        "name": "김해시",
+        "sources": [
+          {
+            "page": "공지사항",
+            "url": "https://www.gimhae.go.kr/03360/00023/00024.web",
+            "sheet": "시-도"
+          },
+          {
+            "page": "고시/공고",
+            "url": "https://www.gimhae.go.kr/03360/00023/00029.web",
+            "sheet": "시-도"
+          }
+        ]
+      },
+      {
+        "name": "양산시",
+        "sources": [
+          {
+            "page": "공지사항",
+            "url": "https://www.yangsan.go.kr/portal/saeol/gosi/list.do?mid=0102010000&token=1756694419601",
+            "sheet": "시-도"
+          },
+          {
+            "page": "고시/공고",
+            "url": "https://www.yangsan.go.kr/portal/saeol/gosi/list.do?seCode=02&mid=0102020000&token=1756694446942",
+            "sheet": "시-도"
+          }
+        ]
+      },
+      {
+        "name": "거제시",
+        "sources": [
+          {
+            "page": "공지사항",
+            "url": "https://www.geoje.go.kr/board/list.geoje?boardId=BBS_0000008&menuCd=DOM_000008902001001000",
+            "sheet": "시-도"
+          },
+          {
+            "page": "고시/공고",
+            "url": "https://www.geoje.go.kr/index.geoje?menuCd=DOM_000008902001002001",
+            "sheet": "시-도"
+          }
+        ]
+      },
+      {
+        "name": "통영시",
+        "sources": [
+          {
+            "page": "공지사항",
+            "url": "https://www.tongyeong.go.kr/00852/00853/00854.web",
+            "sheet": "시-도"
+          },
+          {
+            "page": "고시/공고",
+            "url": "https://www.tongyeong.go.kr/00852/00853/00858.web",
+            "sheet": "시-도"
+          }
+        ]
+      },
+      {
+        "name": "사천시",
+        "sources": [
+          {
+            "page": "공지사항",
+            "url": "https://www.sacheon.go.kr/news/00009/00010.web",
+            "sheet": "시-도"
+          },
+          {
+            "page": "고시/공고",
+            "url": "https://www.sacheon.go.kr/news/00009/00014.web",
+            "sheet": "시-도"
+          }
+        ]
+      },
+      {
+        "name": "밀양시",
+        "sources": [
+          {
+            "page": "공지사항",
+            "url": "https://www.miryang.go.kr/web/bbs/selectNoticeList.do?mnNo=20901000000",
+            "sheet": "시-도"
+          },
+          {
+            "page": "고시/공고",
+            "url": "https://www.miryang.go.kr/web/eMinwonList.do?mnNo=20903000000",
+            "sheet": "시-도"
+          }
+        ]
+      },
+      {
+        "name": "의령군",
+        "sources": [
+          {
+            "page": "공지사항",
+            "url": "http://www.uiryeong.go.kr/board/list.uiryeong?boardId=BBS_0000085&menuCd=DOM_000000403001001000&contentsSid=598&cpath=",
+            "sheet": "시-도"
+          },
+          {
+            "page": "고시/공고",
+            "url": "http://www.uiryeong.go.kr/board/list.uiryeong?boardId=BBS_0000070&menuCd=DOM_000000403010001001&contentsSid=606&cpath=",
+            "sheet": "시-도"
+          }
+        ]
+      },
+      {
+        "name": "함안군",
+        "sources": [
+          {
+            "page": "공지사항",
+            "url": "https://www.haman.go.kr/02385/02386/02387.web",
+            "sheet": "시-도"
+          },
+          {
+            "page": "고시/공고",
+            "url": "https://www.haman.go.kr/02385/02392/05764.web",
+            "sheet": "시-도"
+          }
+        ]
+      },
+      {
+        "name": "창녕군",
+        "sources": [
+          {
+            "page": "공지사항",
+            "url": "https://www.cng.go.kr/news/00000372/00000373.web",
+            "sheet": "시-도"
+          },
+          {
+            "page": "고시/공고",
+            "url": "https://www.cng.go.kr/news/00000372/00000375.web",
+            "sheet": "시-도"
+          }
+        ]
+      },
+      {
+        "name": "고성군",
+        "sources": [
+          {
+            "page": "공지사항",
+            "url": "https://www.goseong.go.kr/board/list.goseong?boardId=BBS_0000118&menuCd=DOM_000000102002001000&contentsSid=28&cpath=",
+            "sheet": "시-도"
+          },
+          {
+            "page": "고시/공고",
+            "url": "https://www.goseong.go.kr/board/list.goseong?boardId=BBS_0000015&menuCd=DOM_000000102002002000&contentsSid=29&cpath=",
+            "sheet": "시-도"
+          }
+        ]
+      },
+      {
+        "name": "남해군",
+        "sources": [
+          {
+            "page": "공지사항",
+            "url": "https://www.namhae.go.kr/socialm/board/List.do?gcode=1131&pageCd=SM010101000&siteGubun=socialm",
+            "sheet": "시-도"
+          },
+          {
+            "page": "고시/공고",
+            "url": "https://www.namhae.go.kr/modules/saeol/gosi.do?&pageCd=SM010110000&siteGubun=socialm",
+            "sheet": "시-도"
+          }
+        ]
+      },
+      {
+        "name": "하동군",
+        "sources": [
+          {
+            "page": "공지사항",
+            "url": "https://www.hadong.go.kr/media/00008/00009.web",
+            "sheet": "시-도"
+          },
+          {
+            "page": "고시/공고",
+            "url": "https://www.hadong.go.kr/media/00012.web",
+            "sheet": "시-도"
+          }
+        ]
+      },
+      {
+        "name": "산청군",
+        "sources": [
+          {
+            "page": "공지사항",
+            "url": "https://www.sancheong.go.kr/www/selectBbsNttList.do?bbsNo=1&key=157",
+            "sheet": "시-도"
+          },
+          {
+            "page": "고시/공고",
+            "url": "https://www.sancheong.go.kr/www/selectBbsNttList.do?bbsNo=118&key=158",
+            "sheet": "시-도"
+          }
+        ]
+      },
+      {
+        "name": "함양군",
+        "sources": [
+          {
+            "page": "공지사항",
+            "url": "https://www.hygn.go.kr/media/00111/00112.web",
+            "sheet": "시-도"
+          },
+          {
+            "page": "고시/공고",
+            "url": "https://www.hygn.go.kr/media/00111/00114.web",
+            "sheet": "시-도"
+          }
+        ]
+      },
+      {
+        "name": "거창군",
+        "sources": [
+          {
+            "page": "공지사항",
+            "url": "https://www.geochang.go.kr/news/board/List.do?gcode=1002&&pageCd=NW0101000000&siteGubun=portal",
+            "sheet": "시-도"
+          },
+          {
+            "page": "고시/공고",
+            "url": "https://www.geochang.go.kr/saeol/gosi.do?&pageCd=NW0102000000&siteGubun=news",
+            "sheet": "시-도"
+          }
+        ]
+      },
+      {
+        "name": "합천군",
+        "sources": [
+          {
+            "page": "공지사항",
+            "url": "https://www.hc.go.kr/04923/04924/04945.web",
+            "sheet": "시-도"
+          },
+          {
+            "page": "고시/공고",
+            "url": "https://www.hc.go.kr/04923/04924/04948.web",
+            "sheet": "시-도"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "region": "전라북도",
+    "subEntities": [
+      {
+        "name": "익산지방국토관리청",
+        "sources": [
+          {
+            "page": "알림마당",
+            "url": "http://www.molit.go.kr/irocm/USR/BORD0201/m_15643/BRD.jsp",
+            "sheet": "주요관청"
+          }
+        ]
+      },
+      {
+        "name": "광주 국토관리사무소",
+        "sources": [
+          {
+            "page": "공지사항",
+            "url": "http://www.molit.go.kr/irocm/USR/BORD0201/m_19663/LST.jsp",
+            "sheet": "주요관청"
+          }
+        ]
+      },
+      {
+        "name": "남원 국토관리사무소",
+        "sources": [
+          {
+            "page": "공지사항",
+            "url": "http://www.molit.go.kr/irocm/USR/BORD0201/m_19785/LST.jsp",
+            "sheet": "주요관청"
+          }
+        ]
+      },
+      {
+        "name": "순천 국토관리사무소",
+        "sources": [
+          {
+            "page": "공지사항",
+            "url": "http://www.molit.go.kr/irocm/USR/BORD0201/m_19814/LST.jsp",
+            "sheet": "주요관청"
+          }
+        ]
+      },
+      {
+        "name": "전주 국토관리사무소",
+        "sources": [
+          {
+            "page": "공지사항",
+            "url": "http://www.molit.go.kr/irocm/USR/BORD0201/m_19805/LST.jsp",
+            "sheet": "주요관청"
+          }
+        ]
+      },
+      {
+        "name": "새만금개발공사",
+        "sources": [
+          {
+            "page": "고시 공고",
+            "url": "https://www.sdco.or.kr/board.es?mid=a10601020000&bid=0007",
+            "sheet": "주요관청"
+          }
+        ]
+      },
+      {
+        "name": "전북도청",
+        "sources": [
+          {
+            "page": "공지사항",
+            "url": "https://www.jeonbuk.go.kr/board/list.jeonbuk?boardId=BBS_0000012&menuCd=DOM_000000103001002001&contentsSid=841&cpath=",
+            "sheet": "주요관청"
+          }
+        ]
+      },
+      {
+        "name": "전북지방환경청",
+        "sources": [
+          {
+            "page": "알림마당",
+            "url": "https://me.go.kr/smg/web/index.do?menuId=803",
+            "sheet": "주요관청"
+          }
+        ]
+      },
+      {
+        "name": "전북개발공사",
+        "sources": [
+          {
+            "page": "공지사항",
+            "url": "https://www.jbdc.co.kr/notice/notice.do",
+            "sheet": "주요관청"
+          }
+        ]
+      },
+      {
+        "name": "전주시",
+        "sources": [
+          {
+            "page": "새소식",
+            "url": "https://www.jeonju.go.kr/planweb/board/list.9is?page=1&&contentUid=ff8080818990c349018b041a87373953&tmpField14=&boardUid=ff8080818990c349018b1dbaa78e4b41&subPath=",
+            "sheet": "시-도"
+          },
+          {
+            "page": "고시/공고",
+            "url": "https://www.jeonju.go.kr/index.9is?contentUid=ff8080818990c349018b041a879f395a",
+            "sheet": "시-도"
+          }
+        ]
+      },
+      {
+        "name": "군산시",
+        "sources": [
+          {
+            "page": "공지사항",
+            "url": "https://www.gunsan.go.kr/main/m140",
+            "sheet": "시-도"
+          },
+          {
+            "page": "고시/공고",
+            "url": "https://eminwon.gunsan.go.kr/emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do",
+            "sheet": "시-도"
+          }
+        ]
+      },
+      {
+        "name": "익산시",
+        "sources": [
+          {
+            "page": "공지사항",
+            "url": "https://www.iksan.go.kr/board/list.iksan?boardId=BBS_IKSAN_NEWS&menuCd=DOM_000002003008001000&contentsSid=2477&cpath=",
+            "sheet": "시-도"
+          },
+          {
+            "page": "고시/공고",
+            "url": "https://eminwon.iksan.go.kr/emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do",
+            "sheet": "시-도"
+          }
+        ]
+      },
+      {
+        "name": "정읍시",
+        "sources": [
+          {
+            "page": "공지사항",
+            "url": "https://www.jeongeup.go.kr/board/list.jeongeup?boardId=BBS_0000012&menuCd=DOM_000000101001001000&contentsSid=5&cpath=",
+            "sheet": "시-도"
+          },
+          {
+            "page": "고시/공고",
+            "url": "http://eminwon.jeongeup.go.kr/emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do",
+            "sheet": "시-도"
+          }
+        ]
+      },
+      {
+        "name": "남원시",
+        "sources": [
+          {
+            "page": "공지사항",
+            "url": "https://www.namwon.go.kr/board/list.do?boardId=BBS_0000135&menuCd=DOM_000000202001001000&contentsSid=45&cpath=",
+            "sheet": "시-도"
+          },
+          {
+            "page": "고시/공고",
+            "url": "https://www.namwon.go.kr/board/list.do?boardId=BBS_0000005&menuCd=DOM_000000202001003000&contentsSid=47&cpath=",
+            "sheet": "시-도"
+          }
+        ]
+      },
+      {
+        "name": "김제시",
+        "sources": [
+          {
+            "page": "공지사항",
+            "url": "https://www.gimje.go.kr/board/list.gimje?boardId=BBS_0000027&menuCd=DOM_000000105001001000&contentsSid=1431&cpath=",
+            "sheet": "시-도"
+          },
+          {
+            "page": "고시/공고",
+            "url": "https://www.gimje.go.kr/board/list.gimje;jsessionid=wztO2yxwPSJgTnHGDLb0qsQk3x6t7sjfV05EE1fjlJKUMGFJbFIo60SLLzdcPGTE.was01_servlet_engine6?boardId=BBS_0000044&menuCd=DOM_000000105001003000&contentsSid=1433&cpath=",
+            "sheet": "시-도"
+          }
+        ]
+      },
+      {
+        "name": "완주군",
+        "sources": [
+          {
+            "page": "공지사항",
+            "url": "https://www.wanju.go.kr/board/list.wanju?boardId=BBS_0000107&menuCd=DOM_000000102001001000&contentsSid=332&cpath=",
+            "sheet": "시-도"
+          },
+          {
+            "page": "고시/공고",
+            "url": "https://www.wanju.go.kr/index.wanju?menuCd=DOM_000000102002002000",
+            "sheet": "시-도"
+          }
+        ]
+      },
+      {
+        "name": "진안군",
+        "sources": [
+          {
+            "page": "공지사항",
+            "url": "https://www.jinan.go.kr/board/list.jinan?boardId=BBS_0000026&menuCd=DOM_000000107001001000&contentsSid=179&cpath=",
+            "sheet": "시-도"
+          },
+          {
+            "page": "고시/공고",
+            "url": "https://www.jinan.go.kr/index.jinan?menuCd=DOM_000000107001014000",
+            "sheet": "시-도"
+          }
+        ]
+      },
+      {
+        "name": "무주군",
+        "sources": [
+          {
+            "page": "공지사항",
+            "url": "https://www.muju.go.kr/planweb/board/list.9is?contentUid=ff8080816c5f9d47016cbd3ae19f006b&boardUid=ff8080816d135a54016d1ecde9d8001a&categoryUid1=ff8080816d135a54016d1f57e4fa00fd",
+            "sheet": "시-도"
+          },
+          {
+            "page": "고시/공고",
+            "url": "https://www.muju.go.kr/index.9is?contentUid=ff8080816c5f9d47016cbd3b2a4a006f",
+            "sheet": "시-도"
+          }
+        ]
+      },
+      {
+        "name": "장수군",
+        "sources": [
+          {
+            "page": "공지사항",
+            "url": "https://www.jangsu.go.kr/board/list.jangsu?boardId=BBS_0000003&menuCd=DOM_000000402001001000&contentsSid=195&cpath=",
+            "sheet": "시-도"
+          },
+          {
+            "page": "고시/공고",
+            "url": "https://www.jangsu.go.kr/index.jangsu?menuCd=DOM_000000402001005000",
+            "sheet": "시-도"
+          }
+        ]
+      },
+      {
+        "name": "임실군",
+        "sources": [
+          {
+            "page": "공지사항",
+            "url": "https://www.imsil.go.kr/board/list.imsil?boardId=BBS_0000002&menuCd=DOM_000000103001001000&contentsSid=161&cpath=",
+            "sheet": "시-도"
+          },
+          {
+            "page": "고시/공고",
+            "url": "https://www.imsil.go.kr/index.imsil?menuCd=DOM_000000103001005000",
+            "sheet": "시-도"
+          }
+        ]
+      },
+      {
+        "name": "순창군",
+        "sources": [
+          {
+            "page": "공지사항",
+            "url": "https://www.sunchang.go.kr/board/list.sunchang?boardId=BBS_0000011&menuCd=DOM_000000110001001000&contentsSid=21&cpath=",
+            "sheet": "시-도"
+          },
+          {
+            "page": "고시/공고",
+            "url": "http://eminwon.sunchang.go.kr/emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do",
+            "sheet": "시-도"
+          }
+        ]
+      },
+      {
+        "name": "고창군",
+        "sources": [
+          {
+            "page": "공지사항",
+            "url": "https://www.gochang.go.kr/board/list.gochang?boardId=BBS_0000083&menuCd=DOM_000000102001001000&contentsSid=234&cpath=",
+            "sheet": "시-도"
+          },
+          {
+            "page": "고시/공고",
+            "url": "https://www.gochang.go.kr/index.gochang?menuCd=DOM_000000102003007000",
+            "sheet": "시-도"
+          }
+        ]
+      },
+      {
+        "name": "부안군",
+        "sources": [
+          {
+            "page": "공지사항",
+            "url": "https://www.buan.go.kr/board/list.buan?boardId=BBS_0000053&menuCd=DOM_000000103001001000&contentsSid=687&cpath=",
+            "sheet": "시-도"
+          },
+          {
+            "page": "고시/공고",
+            "url": "https://www.buan.go.kr/board/list.buan?boardId=BBS_0000191&menuCd=DOM_000000103001003000&contentsSid=472&cpath=",
+            "sheet": "시-도"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "region": "전라남도",
+    "subEntities": [
+      {
+        "name": "전남도청",
+        "sources": [
+          {
+            "page": "고시 공고",
+            "url": "https://www.jeonnam.go.kr/J0203/boardList.do?menuId=jeonnam0203000000",
+            "sheet": "주요관청"
+          }
+        ]
+      },
+      {
+        "name": "전남개발공사",
+        "sources": [
+          {
+            "page": "기타공고",
+            "url": "https://www.jndc.co.kr/cf/Announce/etc.do",
+            "sheet": "주요관청"
+          }
+        ]
+      },
+      {
+        "name": "영산강유역환경청",
+        "sources": [
+          {
+            "page": "알림마당",
+            "url": "https://me.go.kr/ysg/web/index.do?menuId=4282",
+            "sheet": "주요관청"
+          }
+        ]
+      },
+      {
+        "name": "전남도청 도로교통과",
+        "sources": [
+          {
+            "page": "자료실",
+            "url": "https://www.jeonnam.go.kr/T8409/boardList.do?menuId=jeonnam0915020300",
+            "sheet": "주요관청"
+          }
+        ]
+      },
+      {
+        "name": "목포시",
+        "sources": [
+          {
+            "page": "공지사항",
+            "url": "http://gyeyak.mokpo.go.kr/bid",
+            "sheet": "시-도"
+          },
+          {
+            "page": "고시/공고",
+            "url": "https://www.mokpo.go.kr/www/open_administration/city_news/notification",
+            "sheet": "시-도"
+          }
+        ]
+      },
+      {
+        "name": "여수시",
+        "sources": [
+          {
+            "page": "공지사항",
+            "url": "https://www.yeosu.go.kr/www/govt/news/notice",
+            "sheet": "시-도"
+          },
+          {
+            "page": "고시/공고",
+            "url": "https://www.yeosu.go.kr/www/govt/news/notify",
+            "sheet": "시-도"
+          }
+        ]
+      },
+      {
+        "name": "순천시",
+        "sources": [
+          {
+            "page": "공지사항",
+            "url": "https://www.suncheon.go.kr/kr/news/0001/0001/",
+            "sheet": "시-도"
+          },
+          {
+            "page": "고시/공고",
+            "url": "http://www.suncheon.go.kr/kr/news/0004/0005/0002/",
+            "sheet": "시-도"
+          }
+        ]
+      },
+      {
+        "name": "나주시",
+        "sources": [
+          {
+            "page": "공지사항",
+            "url": "https://www.naju.go.kr/www/administration/new/notify",
+            "sheet": "시-도"
+          },
+          {
+            "page": "고시/공고",
+            "url": "https://www.naju.go.kr/www/administration/notice/legislation",
+            "sheet": "시-도"
+          }
+        ]
+      },
+      {
+        "name": "광양시",
+        "sources": [
+          {
+            "page": "공지사항",
+            "url": "https://gwangyang.go.kr/board.es?mid=a11001000000&bid=0001",
+            "sheet": "시-도"
+          },
+          {
+            "page": "고시/공고",
+            "url": "https://gwangyang.go.kr/menu.es?mid=a11009010000",
+            "sheet": "시-도"
+          }
+        ]
+      },
+      {
+        "name": "담양군",
+        "sources": [
+          {
+            "page": "공지사항",
+            "url": "http://www.damyang.go.kr/board/list.damyang?boardId=BBS_0000001&menuCd=DOM_000000104001000000",
+            "sheet": "시-도"
+          },
+          {
+            "page": "고시/공고",
+            "url": "http://www.damyang.go.kr/index.damyang?menuCd=DOM_000000104002001000",
+            "sheet": "시-도"
+          }
+        ]
+      },
+      {
+        "name": "곡성군",
+        "sources": [
+          {
+            "page": "공지사항",
+            "url": "https://www.gokseong.go.kr/kr/board/list.do?bbsId=BBS_000000000000150&menuNo=102001001000",
+            "sheet": "시-도"
+          },
+          {
+            "page": "고시/공고",
+            "url": "https://www.gokseong.go.kr/board/GosiList.do?menuNo=102001003000",
+            "sheet": "시-도"
+          }
+        ]
+      },
+      {
+        "name": "구례군",
+        "sources": [
+          {
+            "page": "공지사항",
+            "url": "https://www.gurye.go.kr/board/list.do?bbsId=BBS_0000000000000056&menuNo=115004001000",
+            "sheet": "시-도"
+          },
+          {
+            "page": "고시/공고",
+            "url": "https://www.gurye.go.kr/board/GosiList.do?menuNo=115004002001",
+            "sheet": "시-도"
+          }
+        ]
+      },
+      {
+        "name": "고흥군",
+        "sources": [
+          {
+            "page": "공지사항",
+            "url": "https://www.goheung.go.kr/boardList.do?pageId=www96&boardId=BD_00018",
+            "sheet": "시-도"
+          },
+          {
+            "page": "고시/공고",
+            "url": "https://www.goheung.go.kr/contentsView.do?pageId=www99",
+            "sheet": "시-도"
+          }
+        ]
+      },
+      {
+        "name": "보성군",
+        "sources": [
+          {
+            "page": "공지사항",
+            "url": "https://www.boseong.go.kr/www/open_administration/city_news/notice",
+            "sheet": "시-도"
+          },
+          {
+            "page": "고시/공고",
+            "url": "https://www.boseong.go.kr/www/open_administration/city_news/notification",
+            "sheet": "시-도"
+          }
+        ]
+      },
+      {
+        "name": "화순군",
+        "sources": [
+          {
+            "page": "공지사항",
+            "url": "https://www.hwasun.go.kr/board.do?S=S01&M=020102000000&b_code=0000000002",
+            "sheet": "시-도"
+          },
+          {
+            "page": "고시/공고",
+            "url": "https://eminwon.hwasun.go.kr/emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do",
+            "sheet": "시-도"
+          }
+        ]
+      },
+      {
+        "name": "장흥군",
+        "sources": [
+          {
+            "page": "공지사항",
+            "url": "https://www.jangheung.go.kr/www/organization/news/notice",
+            "sheet": "시-도"
+          },
+          {
+            "page": "고시/공고",
+            "url": "https://www.jangheung.go.kr/www/organization/news/notification",
+            "sheet": "시-도"
+          }
+        ]
+      },
+      {
+        "name": "강진군",
+        "sources": [
+          {
+            "page": "공지사항",
+            "url": "https://www.gangjin.go.kr/www/government/news/notice",
+            "sheet": "시-도"
+          },
+          {
+            "page": "고시/공고",
+            "url": "https://www.gangjin.go.kr/www/government/notify",
+            "sheet": "시-도"
+          }
+        ]
+      },
+      {
+        "name": "해남군",
+        "sources": [
+          {
+            "page": "공지사항",
+            "url": "https://www.haenam.go.kr/planweb/board/list.9is?contentUid=18e3368f5d745106015de95ebe732057&boardUid=18e3368f5fb80fdc015fdc42b7e003e0&contentUid=18e3368f5d745106015de95ebe732057",
+            "sheet": "시-도"
+          },
+          {
+            "page": "고시/공고",
+            "url": "https://www.haenam.go.kr/planweb/board/list.9is?contentUid=18e3368f5d745106015de961fbbd205e&boardUid=18e3368f644b01470164eeb23d7b30f5&contentUid=18e3368f5d745106015de961fbbd205e",
+            "sheet": "시-도"
+          }
+        ]
+      },
+      {
+        "name": "영암군",
+        "sources": [
+          {
+            "page": "공지사항",
+            "url": "https://www.yeongam.go.kr/home/www/open_information/yeongam_news/notice",
+            "sheet": "시-도"
+          },
+          {
+            "page": "고시/공고",
+            "url": "https://www.yeongam.go.kr/home/www/open_information/yeongam_news/announcement/yeongam.go",
+            "sheet": "시-도"
+          }
+        ]
+      },
+      {
+        "name": "무안군",
+        "sources": [
+          {
+            "page": "공지사항",
+            "url": "https://www.muan.go.kr/www/openmuan/new/notice",
+            "sheet": "시-도"
+          },
+          {
+            "page": "고시/공고",
+            "url": "https://www.muan.go.kr/www/openmuan/new/announcement",
+            "sheet": "시-도"
+          }
+        ]
+      },
+      {
+        "name": "함평군",
+        "sources": [
+          {
+            "page": "공지사항",
+            "url": "https://www.hampyeong.go.kr/boardList.do?pageId=www272&boardId=NOTICE",
+            "sheet": "시-도"
+          },
+          {
+            "page": "고시/공고",
+            "url": "https://www.hampyeong.go.kr/pg/GosiList.do?pageId=www273",
+            "sheet": "시-도"
+          }
+        ]
+      },
+      {
+        "name": "영광군",
+        "sources": [
+          {
+            "page": "공지사항",
+            "url": "https://www.yeonggwang.go.kr/bbs/?b_id=news_notice&site=headquarter_new&mn=9054",
+            "sheet": "시-도"
+          },
+          {
+            "page": "고시/공고",
+            "url": "https://www.yeonggwang.go.kr/bbs/?b_id=gosigonggo&site=headquarter_new&mn=9059",
+            "sheet": "시-도"
+          }
+        ]
+      },
+      {
+        "name": "장성군",
+        "sources": [
+          {
+            "page": "공지사항",
+            "url": "https://www.jangseong.go.kr/home/www/news/jangseong/notice",
+            "sheet": "시-도"
+          },
+          {
+            "page": "고시/공고",
+            "url": "https://www.jangseong.go.kr/home/www/news/jangseong/announcement",
+            "sheet": "시-도"
+          }
+        ]
+      },
+      {
+        "name": "완도군",
+        "sources": [
+          {
+            "page": "공지사항",
+            "url": "https://www.wando.go.kr/www/administration/news/notice",
+            "sheet": "시-도"
+          }
+        ]
+      },
+      {
+        "name": "진도군",
+        "sources": [
+          {
+            "page": "공지사항",
+            "url": "https://www.jindo.go.kr/home/board/B0052.cs?m=23",
+            "sheet": "시-도"
+          },
+          {
+            "page": "고시/공고",
+            "url": "https://www.jindo.go.kr/home/gosi/general.cs?m=24",
+            "sheet": "시-도"
+          }
+        ]
+      },
+      {
+        "name": "신안군",
+        "sources": [
+          {
+            "page": "공지사항",
+            "url": "https://www.shinan.go.kr/home/www/openinfo/participation_07/participation_07_02",
+            "sheet": "시-도"
+          },
+          {
+            "page": "고시/공고",
+            "url": "https://www.shinan.go.kr/home/www/openinfo/participation_07/participation_07_04/page.wscms",
+            "sheet": "시-도"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "region": "강원도",
+    "subEntities": [
+      {
+        "name": "강원도청",
+        "sources": [
+          {
+            "page": "고시 공고",
+            "url": "https://state.gwd.go.kr/portal/bulletin/notification",
+            "sheet": "주요관청"
+          }
+        ]
+      },
+      {
+        "name": "원주지방국토관리청",
+        "sources": [
+          {
+            "page": "알림마당",
+            "url": "http://www.molit.go.kr/wrocm/USR/BORD0201/m_15959/BRD.jsp",
+            "sheet": "주요관청"
+          }
+        ]
+      },
+      {
+        "name": "강릉 국토관리사무소",
+        "sources": [
+          {
+            "page": "공지사항",
+            "url": "http://www.molit.go.kr/wrocm/USR/BORD0201/m_20081/LST.jsp",
+            "sheet": "주요관청"
+          }
+        ]
+      },
+      {
+        "name": "정선 국토관리사무소",
+        "sources": [
+          {
+            "page": "공지사항",
+            "url": "http://www.molit.go.kr/wrocm/USR/BORD0201/m_20143/LST.jsp",
+            "sheet": "주요관청"
+          }
+        ]
+      },
+      {
+        "name": "홍천 국토관리사무소",
+        "sources": [
+          {
+            "page": "공지사항",
+            "url": "http://www.molit.go.kr/wrocm/USR/BORD0201/m_19978/LST.jsp",
+            "sheet": "주요관청"
+          }
+        ]
+      },
+      {
+        "name": "원주지방환경청",
+        "sources": [
+          {
+            "page": "알림마당",
+            "url": "https://me.go.kr/wonju/web/index.do?menuId=1021",
+            "sheet": "주요관청"
+          }
+        ]
+      },
+      {
+        "name": "강원도청 도로관리사업소",
+        "sources": [
+          {
+            "page": "공고 고시",
+            "url": "https://www.provin.gangwon.kr/gw/road/sub03",
+            "sheet": "주요관청"
+          }
+        ]
+      },
+      {
+        "name": "춘천시",
+        "sources": [
+          {
+            "page": "공지사항",
+            "url": "http://cityhall.chuncheon.go.kr/board/list.chuncheon?boardId=BBS_0000257&menuCd=DOM_000000505003005000&contentsSid=1878&cpath=",
+            "sheet": "시-도"
+          },
+          {
+            "page": "고시/공고",
+            "url": "https://www.chuncheon.go.kr/cityhall/administrative-info/notice-info/notice-announcement/",
+            "sheet": "시-도"
+          }
+        ]
+      },
+      {
+        "name": "원주시",
+        "sources": [
+          {
+            "page": "공지사항",
+            "url": "https://www.wonju.go.kr/www/selectBbsNttList.do?bbsNo=1&key=211&",
+            "sheet": "시-도"
+          },
+          {
+            "page": "고시/공고",
+            "url": "https://www.wonju.go.kr/www/selectBbsNttList.do?bbsNo=140&key=216&",
+            "sheet": "시-도"
+          }
+        ]
+      },
+      {
+        "name": "홍천군",
+        "sources": [
+          {
+            "page": "공지사항",
+            "url": "https://www.hongcheon.go.kr/www/selectBbsNttList.do?key=255&bbsNo=1",
+            "sheet": "시-도"
+          },
+          {
+            "page": "고시/공고",
+            "url": "https://www.hongcheon.go.kr/www/selectEminwonList.do?key=278",
+            "sheet": "시-도"
+          }
+        ]
+      },
+      {
+        "name": "횡성군",
+        "sources": [
+          {
+            "page": "공지사항",
+            "url": "https://www.hsg.go.kr/intro/media/00000073.web",
+            "sheet": "시-도"
+          },
+          {
+            "page": "고시/공고",
+            "url": "https://www.hsg.go.kr/www/selectBbsNttList.do?bbsNo=65&key=821&",
+            "sheet": "시-도"
+          }
+        ]
+      },
+      {
+        "name": "영월군",
+        "sources": [
+          {
+            "page": "공지사항",
+            "url": "https://www.yw.go.kr/www/selectBbsNttList.do?bbsNo=15&key=25",
+            "sheet": "시-도"
+          },
+          {
+            "page": "고시/공고",
+            "url": "https://www.yw.go.kr/www/selectBbsNttList.do?bbsNo=17&key=273",
+            "sheet": "시-도"
+          }
+        ]
+      },
+      {
+        "name": "평창군",
+        "sources": [
+          {
+            "page": "공지사항",
+            "url": "https://www.pc.go.kr/portal/government/government-news",
+            "sheet": "시-도"
+          },
+          {
+            "page": "고시/공고",
+            "url": "https://www.pc.go.kr/portal/government/government-notification",
+            "sheet": "시-도"
+          }
+        ]
+      },
+      {
+        "name": "정선군",
+        "sources": [
+          {
+            "page": "공지사항",
+            "url": "https://www.jeongseon.go.kr/portal/openadmin/adminnews/notice",
+            "sheet": "시-도"
+          },
+          {
+            "page": "고시/공고",
+            "url": "https://www.jeongseon.go.kr/portal/openadmin/adminnews/notification",
+            "sheet": "시-도"
+          }
+        ]
+      },
+      {
+        "name": "철원군",
+        "sources": [
+          {
+            "page": "공지사항",
+            "url": "https://www.cwg.go.kr/www/selectBbsNttList.do?bbsNo=24&key=206",
+            "sheet": "시-도"
+          },
+          {
+            "page": "고시/공고",
+            "url": "https://www.cwg.go.kr/www/selectBbsNttList.do?bbsNo=25&key=1226",
+            "sheet": "시-도"
+          }
+        ]
+      },
+      {
+        "name": "화천군",
+        "sources": [
+          {
+            "page": "공지사항",
+            "url": "https://www.ihc.go.kr/www/selectBbsNttList.do?bbsNo=11&key=2338",
+            "sheet": "시-도"
+          },
+          {
+            "page": "고시/공고",
+            "url": "http://www.ihc.go.kr/www/contents.do?key=1004",
+            "sheet": "시-도"
+          }
+        ]
+      },
+      {
+        "name": "양구군",
+        "sources": [
+          {
+            "page": "공지사항",
+            "url": "https://www.yanggu.go.kr/user_sub.php?gid=www&mu_idx=212",
+            "sheet": "시-도"
+          },
+          {
+            "page": "고시/공고",
+            "url": "https://www.yanggu.go.kr/user_sub.php?gid=www&mu_idx=215",
+            "sheet": "시-도"
+          }
+        ]
+      },
+      {
+        "name": "인제군",
+        "sources": [
+          {
+            "page": "공지사항",
+            "url": "https://www.inje.go.kr/portal/adm/notice",
+            "sheet": "시-도"
+          },
+          {
+            "page": "고시/공고",
+            "url": "https://www.inje.go.kr/portal/adm/bulletin/notify",
+            "sheet": "시-도"
+          }
+        ]
+      },
+      {
+        "name": "강릉시",
+        "sources": [
+          {
+            "page": "공지사항",
+            "url": "https://www.gn.go.kr/www/selectBbsNttList.do?bbsNo=12&key=258",
+            "sheet": "시-도"
+          },
+          {
+            "page": "고시/공고",
+            "url": "https://www.gn.go.kr/www/selectBbsNttList.do?bbsNo=12&key=258",
+            "sheet": "시-도"
+          }
+        ]
+      },
+      {
+        "name": "속초시",
+        "sources": [
+          {
+            "page": "공지사항",
+            "url": "https://www.sokcho.go.kr/sc/portal/sokchonews/notice",
+            "sheet": "시-도"
+          },
+          {
+            "page": "고시/공고",
+            "url": "https://www.sokcho.go.kr/sc/portal/sokchonews/notification",
+            "sheet": "시-도"
+          }
+        ]
+      },
+      {
+        "name": "동해시",
+        "sources": [
+          {
+            "page": "공지사항",
+            "url": "https://www.dh.go.kr/www/selectBbsNttList.do?bbsNo=172&key=474",
+            "sheet": "시-도"
+          },
+          {
+            "page": "고시/공고",
+            "url": "https://www.dh.go.kr/www/selectBbsNttList.do?bbsNo=87&key=478",
+            "sheet": "시-도"
+          }
+        ]
+      },
+      {
+        "name": "태백시",
+        "sources": [
+          {
+            "page": "공지사항",
+            "url": "http://www.taebaek.go.kr/www/selectBbsNttList.do?bbsNo=24&key=351",
+            "sheet": "시-도"
+          },
+          {
+            "page": "고시/공고",
+            "url": "http://www.taebaek.go.kr/www/selectBbsNttList.do?bbsNo=25&key=352",
+            "sheet": "시-도"
+          }
+        ]
+      },
+      {
+        "name": "삼척시",
+        "sources": [
+          {
+            "page": "공지사항",
+            "url": "https://www.samcheok.go.kr/media/00083/00089.web",
+            "sheet": "시-도"
+          },
+          {
+            "page": "고시/공고",
+            "url": "https://www.samcheok.go.kr/media/00084/00095.web",
+            "sheet": "시-도"
+          }
+        ]
+      },
+      {
+        "name": "고성군",
+        "sources": [
+          {
+            "page": "공지사항",
+            "url": "https://www.goseong.go.kr/board/list.goseong?boardId=BBS_0000118&menuCd=DOM_000000102002001000&contentsSid=28&cpath=",
+            "sheet": "시-도"
+          },
+          {
+            "page": "고시/공고",
+            "url": "https://www.goseong.go.kr/board/list.goseong?boardId=BBS_0000015&menuCd=DOM_000000102002002000&contentsSid=29&cpath=",
+            "sheet": "시-도"
+          }
+        ]
+      },
+      {
+        "name": "양양군",
+        "sources": [
+          {
+            "page": "공지사항",
+            "url": "https://www.yangyang.go.kr/gw/portal/yyc_news_notice",
+            "sheet": "시-도"
+          },
+          {
+            "page": "고시/공고",
+            "url": "https://www.yangyang.go.kr/gw/portal/yyc_news_notifi",
+            "sheet": "시-도"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "region": "공사",
+    "subEntities": [
+      {
+        "name": "농어촌공사",
+        "sources": [
+          {
+            "page": "공지사항",
+            "url": "https://www.ekr.or.kr/planweb/board/list.krc?contentUid=402880317cc0644a017cc0c22f2800f0&boardUid=402880317cc0644a017cc463cec202be&contentUid=402880317cc0644a017cc0c22f2800f0&subPath=",
+            "sheet": "주요관청"
+          }
+        ]
+      },
+      {
+        "name": "물산업플랫폼",
+        "sources": [
+          {
+            "page": "공지사항",
+            "url": "https://www.kwater.or.kr/wis/wq/index.do?w2xPath=/wis/ui/index.xml",
+            "sheet": "주요관청"
+          }
+        ]
+      },
+      {
+        "name": "한국도로공사",
+        "sources": [
+          {
+            "page": "메인페이지",
+            "url": "https://www.ex.co.kr/",
+            "sheet": "주요관청"
+          }
+        ]
+      },
+      {
+        "name": "LH 한국주택토지공사",
+        "sources": [
+          {
+            "page": "메인페이지",
+            "url": "https://www.lh.or.kr/index.es?sid=a1",
+            "sheet": "주요관청"
+          }
+        ]
+      }
+    ]
+  }
+]
