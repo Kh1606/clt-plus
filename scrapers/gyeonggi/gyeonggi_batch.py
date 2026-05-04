@@ -4,7 +4,8 @@
 Skipped (JS-rendered / SSL error / 404 / JS-onclick navigation):
   경기도청 (JS table, no anchors)
   성남시청, 안양시청, 용인시청 공법 (SSL errors)
-  고양시청, 남양주시청, 수원시청, 안산시청, 화성시청, 양주시, 의왕시 (JS/no table)
+  고양시청, 화성시청, 양주시, 의왕시 (JS/no links)
+  안산시청 (no article links)
   용인시청 입찰 (JSP session-based)
   평택시청 (404)
   시흥시청, 의정부시청, 과천시, 광명시, 광주시, 안성시, 오산시, 이천시 (saeol CMS — title anchors use req.post/boardView JS)
@@ -28,6 +29,14 @@ SCRAPERS = [
     _entry("경기도시공사", "고시 공고",
            "https://www.gh.or.kr/gh/bid-announcement.do",
            require="mode=view"),
+    # 남양주시 — selectEminwonWebList; col 1 (번호|고시번호+제목 combined)
+    _entry("남양주시", "고시 공고",
+           "https://www.nyj.go.kr/www/selectEminwonWebList.do?key=2492&sa1=01&sa1=02&sa1=04&sa1=05&sc4=2024",
+           require="selectEminwonWebView"),
+    # 수원시 — saeallOfr BD_ofrList; col 2 (번호|고시공고번호|제목)
+    _entry("수원시", "공고 공시 입법예고",
+           "https://www.suwon.go.kr/web/saeallOfr/BD_ofrList.do",
+           title_col=2, require="BD_ofrView"),
     # 부천시청 — basicboard, col 1; encid= distinguishes detail from list
     _entry("부천시청", "기타공고",
            "https://www.bucheon.go.kr/site/program/board/basicboard/list?boardtypeid=26754&menuid=148002003002",

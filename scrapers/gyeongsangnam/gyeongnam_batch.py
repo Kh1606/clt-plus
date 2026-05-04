@@ -3,10 +3,8 @@
 
 Skipped (JS-rendered / 404 / NO TABLES):
   창원시×2, 양산시×2, 진주시×2, 김해시×2, 통영시×2, 사천시×2, 밀양시 공지,
-  의령군 공지, 함안군×2, 창녕군×2, 고성군 고시, 남해군×2, 하동군×2,
-  함양군×2, 거창군×2, 합천군×2
-  (portal/saeol JS, .web NO TABLES, board/list.uiryeong 공지 JS,
-   socialm board JS, saeol gosiList JS)
+  함안군×2, 창녕군×2, 남해군×2, 하동군×2, 함양군×2, 거창군×2, 합천군×2
+  (portal/saeol JS, .web NO TABLES, socialm board JS, saeol gosiList JS)
 
 경남도청 도로관리사업소 — board/list.gyeong, street/board/view.gyeong detail links
 경남도청 고시공고 — index.gyeong CMS, conGosiGbn param in detail hrefs, title col 2
@@ -50,10 +48,18 @@ SCRAPERS = [
     _entry("거제시", "고시공고",
            "https://www.geoje.go.kr/index.geoje?menuCd=DOM_000008902001002001",
            require="m=D"),
+    # 의령군 공지사항 — board/list.uiryeong, title col 1
+    _entry("의령군", "공지사항",
+           "http://www.uiryeong.go.kr/board/list.uiryeong?boardId=BBS_0000085&menuCd=DOM_000000203001001000&contentsSid=185",
+           require="view.uiryeong"),
     # 고성군 공지 — board/list.goseong, title col 1
     _entry("고성군", "공지사항",
            "https://www.goseong.go.kr/board/list.goseong?boardId=BBS_0000118&menuCd=DOM_000000102002001000&contentsSid=28&cpath=",
            require="board/view.goseong"),
+    # 고성군 고시공고 — same site, col 2 (번호|고시공고번호|제목)
+    _entry("고성군", "고시공고",
+           "https://www.goseong.go.kr/board/list.goseong?boardId=BBS_0000015&menuCd=DOM_000000103001014000&contentsSid=29&cpath=",
+           title_col=2, require="view.goseong"),
     # 산청군 공지+고시 — selectBbsNttList CMS
     _entry("산청군", "공지사항",
            "https://www.sancheong.go.kr/www/selectBbsNttList.do?bbsNo=1&key=157",
