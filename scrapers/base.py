@@ -149,6 +149,31 @@ class JsonFileSink:
         )
 
 
+class SupabaseSink:
+    """Upserts notices into the `notices` table using the SECRET key.
+
+    Requires env vars:
+        SUPABASE_URL          (e.g. https://abc.supabase.co)
+        SUPABASE_SECRET_KEY   (the sb_secret_... key — never commit)
+
+    Uses notice_id (sha1 of detail_url) as the upsert conflict key, so
+    re-running the scraper is idempotent: same URL → same row, no dupes.
+    """
+
+    def __init__(self, url: str, secret_key: str, table: str = "notices"):
+        from supabase import create_client
+        self.client = create_client(url, secret_key)
+        self.table = table
+
+    def write(self, notices: Iterable[Notice]) -> int:
+        rows = [n.asdict() for n in notices]
+        if not rows:
+            return 0
+        # Supabase Python client batches; do one call per scraper output (≤ ~50 rows)
+        self.client.table(self.table).upsert(rows, on_conflict="notice_id").execute()
+        return len(rows)
+
+
 # Polite default delay between sites
 def polite_sleep(seconds: float = 1.0):
     time.sleep(seconds)

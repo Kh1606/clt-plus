@@ -3,7 +3,7 @@ import regionsData from './data/regions.json'
 import Header from './components/Header.jsx'
 import RegionSidebar from './components/RegionSidebar.jsx'
 import SourceCard from './components/SourceCard.jsx'
-import NoticePlaceholder from './components/NoticePlaceholder.jsx'
+import NoticeList from './components/NoticeList.jsx'
 
 export default function App() {
   const [selected, setSelected] = useState(null)
@@ -107,9 +107,9 @@ function SubEntityView({ region, sub }) {
       <section>
         <SectionHeader
           title="최근 공지사항"
-          subtitle="Phase 2에서 크롤러 연결 예정"
+          subtitle="Supabase에서 실시간 조회"
         />
-        <NoticePlaceholder />
+        <NoticeList region={region} subEntity={sub.name} />
       </section>
     </div>
   )

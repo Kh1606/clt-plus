@@ -11,10 +11,17 @@ from __future__ import annotations
 
 import argparse
 import importlib
+import os
 import sys
 import urllib3
 
-from scrapers.base import StdoutSink, JsonFileSink, polite_sleep
+try:
+    from dotenv import load_dotenv
+    load_dotenv()
+except ImportError:
+    pass
+
+from scrapers.base import StdoutSink, JsonFileSink, SupabaseSink, polite_sleep
 
 # Register scrapers here. Each entry is the dotted module path; the module
 # must expose `SOURCE: SourceMeta` and `scrape() -> list[Notice]`.
@@ -32,10 +39,23 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--out", help="Write all notices to this JSON file")
     ap.add_argument("--only", help="Run only modules whose path contains this substring")
+    ap.add_argument(
+        "--supabase",
+        action="store_true",
+        help="Upsert into Supabase. Reads SUPABASE_URL + SUPABASE_SECRET_KEY from env (or .env).",
+    )
     args = ap.parse_args()
 
     stdout_sink = StdoutSink()
     json_sink = JsonFileSink(args.out) if args.out else None
+    supabase_sink = None
+    if args.supabase:
+        url = os.environ.get("SUPABASE_URL")
+        key = os.environ.get("SUPABASE_SECRET_KEY")
+        if not url or not key:
+            print("ERROR: --supabase requires SUPABASE_URL and SUPABASE_SECRET_KEY in env (.env)", file=sys.stderr)
+            sys.exit(2)
+        supabase_sink = SupabaseSink(url, key)
 
     total = 0
     failures: list[tuple[str, str]] = []
@@ -52,6 +72,8 @@ def main():
             count = stdout_sink.write(notices)
             if json_sink:
                 json_sink.write(notices)
+            if supabase_sink:
+                supabase_sink.write(notices)
             print(f"   → {count} notices")
             total += count
         except Exception as e:  # noqa: BLE001
