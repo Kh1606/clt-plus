@@ -26,24 +26,37 @@ from scrapers.base import StdoutSink, JsonFileSink, SupabaseSink, polite_sleep
 # Register scrapers here. Each entry is the dotted module path; the module
 # must expose `SOURCE: SourceMeta` and `scrape() -> list[Notice]`.
 SCRAPERS = [
+    # 충청남도
     "scrapers.chungcheongnam.asan",
-    "scrapers.busan.busan_si",
+    # 대전광역시
     "scrapers.daejeon.daejeon_si",
-    # Seoul (full coverage of scrapeable sub-entities)
+    # 서울특별시 (5 of 8 — molit/env-ministry endpoints block bare requests)
     "scrapers.seoul.seoul_si",
     "scrapers.seoul.suwon_kukto",
     "scrapers.seoul.sisul",
     "scrapers.seoul.ish",
     "scrapers.seoul.doro_seoul",
-    # blocked by upstream anti-bot — leave as TODO for later:
-    #   서울지방국토관리청 (molit.go.kr/srocm m_13078)
-    #   의정부 국토관리사무소 (molit subdomain)
-    #   한강유역환경청 (env-ministry firewall)
+    # 부산광역시 (7 of 10 — 부산지방국토관리청, 진영 국토관리사무소, 부산도시공사 fail/404)
+    "scrapers.busan.busan_si",
+    "scrapers.busan.jinju_kukto",
+    "scrapers.busan.daegu_kukto",
+    "scrapers.busan.pohang_kukto",
+    "scrapers.busan.yeongju_kukto",
+    "scrapers.busan.busan_gunsul",
+    "scrapers.busan.bisco",
 ]
 
 
 def main():
     urllib3.disable_warnings()
+
+    # Windows consoles default to cp949; force UTF-8 with replace fallback so
+    # an unprintable emoji in a title can't crash the whole scraper.
+    try:
+        sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+        sys.stderr.reconfigure(encoding="utf-8", errors="replace")
+    except (AttributeError, ValueError):
+        pass
 
     ap = argparse.ArgumentParser()
     ap.add_argument("--out", help="Write all notices to this JSON file")
