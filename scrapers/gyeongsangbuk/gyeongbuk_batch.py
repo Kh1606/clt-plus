@@ -28,6 +28,10 @@ SCRAPERS = [
     _entry("경북도청", "고시공고",
            "https://www.gb.go.kr/Main/page.do?mnu_uid=6789&&BD_CODE=gosi_notice",
            require="BD_CODE=gosi_notice"),
+    # 경북 북부건설사업소 고시공고 — same domain, eGovFrame board, title col 1
+    _entry("경북 북부건설사업소", "고시공고",
+           "https://www.gb.go.kr/Main/gunsul/page.do?mnu_uid=15040&LARGE_CODE=980&MEDIUM_CODE=30&SMALL_CODE=10&mnu_order=3",
+           require="BD_CODE=gunsul_notice_north"),
     # 안동시 — portal/bbs/list.do (공지) + portal/saeol/gosi (고시)
     _entry("안동시", "공지사항",
            "https://www.andong.go.kr/portal/bbs/list.do?ptIdx=156&mId=0401010000",

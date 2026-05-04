@@ -45,7 +45,7 @@ SCRAPERS = [
     "scrapers.seoul.sisul",
     "scrapers.seoul.ish",
     "scrapers.seoul.doro_seoul",
-    # 부산광역시 (7 of 10 — 부산지방국토관리청, 진영 국토관리사무소, 부산도시공사 fail/404)
+    # 부산광역시 (8 of 10 — 부산지방국토관리청, 진영 국토관리사무소 fail/404)
     "scrapers.busan.busan_si",
     "scrapers.busan.jinju_kukto",
     "scrapers.busan.daegu_kukto",
@@ -53,6 +53,7 @@ SCRAPERS = [
     "scrapers.busan.yeongju_kukto",
     "scrapers.busan.busan_gunsul",
     "scrapers.busan.bisco",
+    "scrapers.busan.busan_batch",
     # 대구광역시 (1 of 5 — 대구시청 JS-loaded; 김천/상주시청 404; 대구지방환경청 blocked)
     "scrapers.daegu.daegu_dosi",
     # 인천광역시 (2 of 3 — 인천도시공사 returns HTTP 500)
@@ -80,6 +81,8 @@ SCRAPERS = [
     "scrapers.gyeongsangnam.gyeongnam_batch",
     # 강원도 (15 of 32 — SSL errors, timeouts, JS onclick)
     "scrapers.gangwon.gangwon_batch",
+    # 전국 공사/공단
+    "scrapers.gongsa.gongsa_batch",
     # 제주도 (3 of 4 — 서귀포시청 returns empty initial HTML)
     "scrapers.jeju.jeju_do",
     "scrapers.jeju.jeju_si",

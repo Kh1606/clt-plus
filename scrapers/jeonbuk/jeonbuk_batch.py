@@ -29,9 +29,13 @@ def _molit(sub, page, url):
 
 
 SCRAPERS = [
-    # 전북도청 공지사항 — board/list.jeonbuk, title col 1
+    # 전북도청 공지사항 — board/list.jeonbuk (BBS_0000012), title col 1
     _entry("전북도청", "공지사항",
            "https://www.jeonbuk.go.kr/board/list.jeonbuk?boardId=BBS_0000012&menuCd=DOM_000000103001002001&contentsSid=841&cpath=",
+           require="view.jeonbuk"),
+    # 전북도청 전북소식 — board/list.jeonbuk (BBS_0000005), title col 1
+    _entry("전북도청", "전북소식",
+           "https://www.jeonbuk.go.kr/board/list.jeonbuk?boardId=BBS_0000005&menuCd=DOM_000000102001001000&contentsSid=76&cpath=",
            require="view.jeonbuk"),
     # 새만금개발공사 — board.es ESMS, title col 1
     _entry("새만금개발공사", "고시 공고",
