@@ -51,6 +51,24 @@ SCRAPERS = [
     "scrapers.incheon.jonggeon",
     # 광주광역시 (1 of 3 — 광주시청 + 도시건설본부 are JS-loaded)
     "scrapers.gwangju.gmcc",
+    # 대전광역시 — finishing the metro (8 of 8)
+    "scrapers.daejeon.daejeon_kukto",
+    "scrapers.daejeon.nonsan_kukto",
+    "scrapers.daejeon.chungju_kukto",
+    "scrapers.daejeon.boeun_kukto",
+    "scrapers.daejeon.yesan_kukto",
+    "scrapers.daejeon.daejeon_gunseol",
+    "scrapers.daejeon.dcco",
+    # 울산광역시 (2 of 2)
+    "scrapers.ulsan.umca",
+    "scrapers.ulsan.ulsan_si",
+    # 세종특별시 (1 of 2 — 세종도시교통공사 has no tables, JS-loaded)
+    "scrapers.sejong.sejong_si_notice",
+    "scrapers.sejong.sejong_si_gosi",
+    # 제주도 (3 of 4 — 서귀포시청 returns empty initial HTML)
+    "scrapers.jeju.jeju_do",
+    "scrapers.jeju.jeju_si",
+    "scrapers.jeju.jpdc",
 ]
 
 
