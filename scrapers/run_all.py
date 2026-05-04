@@ -28,6 +28,9 @@ from scrapers.base import StdoutSink, JsonFileSink, SupabaseSink, polite_sleep
 SCRAPERS = [
     # 충청남도
     "scrapers.chungcheongnam.asan",
+    "scrapers.chungcheongnam.chungnam_batch",
+    # 충청북도
+    "scrapers.chungcheongbuk.chungbuk_batch",
     # 대전광역시
     "scrapers.daejeon.daejeon_si",
     # 서울특별시 (5 of 8 — molit/env-ministry endpoints block bare requests)
@@ -112,21 +115,31 @@ def main():
             continue
         try:
             mod = importlib.import_module(mod_path)
-            src = mod.SOURCE
+        except Exception as e:  # noqa: BLE001
+            print(f"   ✗ IMPORT FAILED {mod_path}: {type(e).__name__}: {e}", file=sys.stderr)
+            failures.append((mod_path, repr(e)))
+            continue
+
+        # Batch modules export SCRAPERS = [(SourceMeta, scrape_fn), ...]
+        # Standard modules export SOURCE + scrape()
+        entries = mod.SCRAPERS if hasattr(mod, "SCRAPERS") else [(mod.SOURCE, mod.scrape)]
+
+        for src, scrape_fn in entries:
             print(f"\n── {src.region} / {src.sub_entity} / {src.source_page}")
             print(f"   {src.source_url}")
-            notices = mod.scrape()
-            count = stdout_sink.write(notices)
-            if json_sink:
-                json_sink.write(notices)
-            if supabase_sink:
-                supabase_sink.write(notices)
-            print(f"   → {count} notices")
-            total += count
-        except Exception as e:  # noqa: BLE001
-            print(f"   ✗ FAILED: {type(e).__name__}: {e}", file=sys.stderr)
-            failures.append((mod_path, repr(e)))
-        polite_sleep(1.0)
+            try:
+                notices = scrape_fn()
+                count = stdout_sink.write(notices)
+                if json_sink:
+                    json_sink.write(notices)
+                if supabase_sink:
+                    supabase_sink.write(notices)
+                print(f"   → {count} notices")
+                total += count
+            except Exception as e:  # noqa: BLE001
+                print(f"   ✗ FAILED: {type(e).__name__}: {e}", file=sys.stderr)
+                failures.append((f"{mod_path}/{src.sub_entity}", repr(e)))
+            polite_sleep(1.0)
 
     if json_sink:
         json_sink.flush()
