@@ -5,10 +5,11 @@ Skipped:
   전북개발공사 (SSL error)
   전북지방환경청 me.go.kr (blocked)
   익산지방국토관리청 BRD.jsp (returns 0 notices)
-  익산시, 남원시 공지, 순창군 (404 or JS onclick)
-  완주군 고시, 진안군 고시, 장수군, 고창군, 무주군 고시 (JS index.*.go.kr / NO TABLES)
-  김제시 공지, 완주군 공지, 진안군 공지 (non-table list layout)
-  군산시 고시공고, eminwon.*.go.kr OfrAction.do (JS or unverified)
+  남원시 공지 (404 or JS onclick)
+  완주군 고시, 진안군 고시, 무주군 고시, 임실군 고시, 장수군 고시 (JS index.*.go.kr)
+  진안군 공지, 장수군 공지, 고창군 (non-table list layout)
+  김제시 공지 (non-table list layout)
+  군산시 고시공고, eminwon.*.go.kr OfrAction.do (JS or SSL)
   전북도청 고시/공고 (JS index.jeonbuk)
 
 molit 국토관리사무소 boards use scrape_molit_jsp helper (LST.jsp, auto-detects date col).
@@ -77,6 +78,22 @@ SCRAPERS = [
     _entry("남원시", "고시공고",
            "https://www.namwon.go.kr/board/post/list.do?boardUid=ff8080818ea1fec5018ea24137680031&menuUid=ff8080818e3beff0018e4077131b007a&sort=registerDt,desc",
            title_col=2, require="post/view.do"),
+    # 익산시 공지사항 — board/post/list.do, title col 1
+    _entry("익산시", "공지사항",
+           "https://www.iksan.go.kr/board/post/list.do?boardUid=ff80808199dd1d7d0199e15235920a20&menuUid=ff80808198eafcbd019902aad8302bfa",
+           require="post/view.do"),
+    # 순창군 공지사항 — board/post/list.do, title col 1
+    _entry("순창군", "공지사항",
+           "https://www.sunchang.go.kr/board/post/list.do?boardUid=ff8080819a2f0e3b019a6c0c17ba1fd9&menuUid=ff8080819a2f0e3b019a5d1b0c40164a",
+           require="post/view.do"),
+    # 완주군 공지사항 — planweb/board/list.9is, title col 1
+    _entry("완주군", "공지사항",
+           "https://www.wanju.go.kr/planweb/board/list.9is?contentUid=ff8080818b024d8e018b274f3fdd2ae2&boardUid=ff8080818a49961a018ab011af3543bc&categoryUid2=ff8080818bc7fa7c018bd69c596z9039&contentUid=ff8080818b024d8e018b274f3fdd2ae2&subPath=",
+           require="view.9is"),
+    # 무주군 공지사항 — planweb/board/list.9is, title col 1
+    _entry("무주군", "공지사항",
+           "https://www.muju.go.kr/planweb/board/list.9is?contentUid=ff8080816c5f9d47016cbd3ae19f006b&boardUid=ff8080816d135a54016d1ecde9d8001a&categoryUid1=ff8080816d135a54016d1f57e4fa00fd",
+           require="view.9is"),
     # molit 국토관리사무소 boards
     _molit("광주 국토관리사무소", "공지사항",
            "http://www.molit.go.kr/irocm/USR/BORD0201/m_19663/LST.jsp"),
