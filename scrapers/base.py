@@ -22,8 +22,16 @@ from dataclasses import dataclass, asdict, field
 from datetime import datetime, timezone
 from typing import Iterable, Protocol
 
+import ssl
+
 import requests
 from bs4 import BeautifulSoup
+from requests.adapters import HTTPAdapter
+try:
+    from urllib3.util.ssl_ import create_urllib3_context
+    _HAS_URLLIB3_CTX = True
+except ImportError:
+    _HAS_URLLIB3_CTX = False
 
 UA = (
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
@@ -63,6 +71,48 @@ class Notice:
 
     def asdict(self) -> dict:
         return asdict(self)
+
+
+class _LegacySSLAdapter(HTTPAdapter):
+    """Allow older TLS/cipher suites rejected by modern OpenSSL defaults.
+
+    Uses TLSv1 minimum + SECLEVEL=0 to reach Korean gov sites that still
+    run old TLS stacks (e.g. gangneung.go.kr, sokcho.go.kr, jbdc.co.kr).
+    """
+
+    def init_poolmanager(self, *args, **kwargs):
+        ctx = ssl.SSLContext(ssl.PROTOCOL_TLS_CLIENT)
+        ctx.check_hostname = False
+        ctx.verify_mode = ssl.CERT_NONE
+        ctx.set_ciphers("ALL:@SECLEVEL=0")
+        if hasattr(ssl, "OP_LEGACY_SERVER_CONNECT"):
+            ctx.options |= ssl.OP_LEGACY_SERVER_CONNECT
+        try:
+            ctx.minimum_version = ssl.TLSVersion.TLSv1
+        except AttributeError:
+            pass
+        kwargs["ssl_context"] = ctx
+        super().init_poolmanager(*args, **kwargs)
+
+    def send(self, request, **kw):
+        kw.setdefault("verify", False)
+        return super().send(request, **kw)
+
+
+def _legacy_session() -> requests.Session:
+    s = requests.Session()
+    s.headers.update(DEFAULT_HEADERS)
+    adapter = _LegacySSLAdapter()
+    s.mount("https://", adapter)
+    s.mount("http://", adapter)
+    return s
+
+
+def ssl_get(url: str, **kw) -> requests.Response:
+    """GET with legacy TLS for sites that reject modern cipher/handshake."""
+    r = _legacy_session().get(url, timeout=20, **kw)
+    r.raise_for_status()
+    return r
 
 
 def get(url: str, *, session: requests.Session | None = None, **kw) -> requests.Response:
