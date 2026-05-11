@@ -6,8 +6,8 @@ Skipped:
   전북지방환경청 me.go.kr (blocked)
   익산지방국토관리청 BRD.jsp (returns 0 notices)
   남원시 공지 (404 or JS onclick)
-  완주군 고시, 진안군 고시, 무주군 고시, 임실군 고시, 장수군 고시 (JS index.*.go.kr)
-  진안군 공지, 장수군 공지, 고창군 (non-table list layout)
+  무주군 고시 (index.9is is a portal menu page with no article links)
+  진안군 공지/고시, 장수군 공지/고시, 고창군 공지/고시 → jeonbuk_list_batch.py
   김제시 공지 (non-table list layout)
   군산시 고시공고, eminwon.*.go.kr OfrAction.do (JS or SSL)
   전북도청 고시/공고 (JS index.jeonbuk)
@@ -16,12 +16,18 @@ molit 국토관리사무소 boards use scrape_molit_jsp helper (LST.jsp, auto-de
 """
 from scrapers.base import SourceMeta
 from scrapers._helpers.simple_table import make_scrape
+from scrapers._helpers.simple_list import make_list_scrape
 from scrapers._helpers.molit_jsp import scrape_molit_jsp
 
 
 def _entry(sub, page, url, **opts):
     src = SourceMeta(region="전라북도", sub_entity=sub, source_page=page, source_url=url)
     return src, make_scrape(src, **opts)
+
+
+def _lentry(sub, page, url, **opts):
+    src = SourceMeta(region="전라북도", sub_entity=sub, source_page=page, source_url=url)
+    return src, make_list_scrape(src, **opts)
 
 
 def _molit(sub, page, url):
@@ -62,6 +68,10 @@ SCRAPERS = [
     _entry("임실군", "공지사항",
            "https://www.imsil.go.kr/board/list.imsil?boardId=BBS_0000002&menuCd=DOM_000000103001001000&contentsSid=161&cpath=",
            require="view.imsil"),
+    # 임실군 고시공고 — list.imsil, no <table>; use simple_list
+    _lentry("임실군", "고시공고",
+            "https://www.imsil.go.kr/board/list.imsil?boardId=BBS_0000003&menuCd=DOM_000000103001005000&contentsSid=164&cpath=",
+            require="view.imsil?boardId=BBS_0000003"),
     # 부안군 공지사항 — board/list.buan, title col 1
     _entry("부안군", "공지사항",
            "https://www.buan.go.kr/board/list.buan?boardId=BBS_0000053&menuCd=DOM_000000103001001000&contentsSid=687&cpath=",
@@ -90,6 +100,10 @@ SCRAPERS = [
     _entry("완주군", "공지사항",
            "https://www.wanju.go.kr/planweb/board/list.9is?contentUid=ff8080818b024d8e018b274f3fdd2ae2&boardUid=ff8080818a49961a018ab011af3543bc&categoryUid2=ff8080818bc7fa7c018bd69c596z9039&contentUid=ff8080818b024d8e018b274f3fdd2ae2&subPath=",
            require="view.9is"),
+    # 완주군 고시공고 — index.9is portal page has no <table>; use simple_list
+    _lentry("완주군", "고시공고",
+            "https://www.wanju.go.kr/index.9is?contentUid=ff8080818b024d8e018b274f41dd2af8",
+            require="view.9is"),
     # 무주군 공지사항 — planweb/board/list.9is, title col 1
     _entry("무주군", "공지사항",
            "https://www.muju.go.kr/planweb/board/list.9is?contentUid=ff8080816c5f9d47016cbd3ae19f006b&boardUid=ff8080816d135a54016d1ecde9d8001a&categoryUid1=ff8080816d135a54016d1f57e4fa00fd",

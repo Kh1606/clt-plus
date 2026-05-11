@@ -35,8 +35,10 @@ SCRAPERS = [
     "scrapers.gyeonggi.gyeonggi_batch",
     # 전라북도
     "scrapers.jeonbuk.jeonbuk_batch",
+    "scrapers.jeonbuk.jeonbuk_list_batch",
     # 전라남도
     "scrapers.jeonnam.jeonnam_batch",
+    "scrapers.jeonnam.jeonnam_list_batch",
     # 대전광역시
     "scrapers.daejeon.daejeon_si",
     # 서울특별시 (5 of 8 — molit/env-ministry endpoints block bare requests)
