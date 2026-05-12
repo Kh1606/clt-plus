@@ -12,15 +12,16 @@ walks up to the nearest block-level ancestor to pick up the date.
 from __future__ import annotations
 from urllib.parse import urljoin
 
-from scrapers.base import Notice, SourceMeta, get, soup, parse_date, clean
+from scrapers.base import Notice, SourceMeta, get, ssl_get, soup, parse_date, clean
 
 
 def scrape_simple_list(
     source: SourceMeta,
     *,
     require: str | None = None,
+    use_ssl: bool = False,
 ) -> list[Notice]:
-    r = get(source.source_url)
+    r = (ssl_get if use_ssl else get)(source.source_url)
     bs = soup(r.text)  # r.text (not r.content) — some sites need encoding-decoded str
 
     seen: set[str] = set()
@@ -69,4 +70,11 @@ def make_list_scrape(source: SourceMeta, **opts):
     """Returns a thunk `() -> list[Notice]` for batch SCRAPERS exports."""
     def _scrape():
         return scrape_simple_list(source, **opts)
+    return _scrape
+
+
+def make_ssl_list_scrape(source: SourceMeta, **opts):
+    """Like make_list_scrape but uses ssl_get for old-TLS servers."""
+    def _scrape():
+        return scrape_simple_list(source, use_ssl=True, **opts)
     return _scrape

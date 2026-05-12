@@ -31,6 +31,7 @@ SCRAPERS = [
     "scrapers.chungcheongnam.chungnam_batch",
     # 충청북도
     "scrapers.chungcheongbuk.chungbuk_batch",
+    "scrapers.chungcheongbuk.chungbuk_web_batch",
     # 경기도
     "scrapers.gyeonggi.gyeonggi_batch",
     # 전라북도
@@ -61,8 +62,9 @@ SCRAPERS = [
     # 인천광역시 (2 of 3 — 인천도시공사 returns HTTP 500)
     "scrapers.incheon.incheon_si",
     "scrapers.incheon.jonggeon",
-    # 광주광역시 (1 of 3 — 광주시청 + 도시건설본부 are JS-loaded)
+    # 광주광역시 (2 of 3 — 도시건설본부 새소식 JS-loaded)
     "scrapers.gwangju.gmcc",
+    "scrapers.gwangju.gwangju_si",
     # 대전광역시 — finishing the metro (8 of 8)
     "scrapers.daejeon.daejeon_kukto",
     "scrapers.daejeon.nonsan_kukto",
@@ -71,6 +73,7 @@ SCRAPERS = [
     "scrapers.daejeon.yesan_kukto",
     "scrapers.daejeon.daejeon_gunseol",
     "scrapers.daejeon.dcco",
+    "scrapers.daejeon.ddc",
     # 울산광역시 (2 of 2)
     "scrapers.ulsan.umca",
     "scrapers.ulsan.ulsan_si",
@@ -80,12 +83,15 @@ SCRAPERS = [
     "scrapers.sejong.sejong_batch",
     # 경상북도 (9 of 38 — most are JS-rendered portal/saeol or open_content)
     "scrapers.gyeongsangbuk.gyeongbuk_batch",
-    # 경상남도 (9 of 32 — portal/saeol JS, .web NO TABLES, etc.)
+    # 경상남도 (9 of 32 static + 21 .web Playwright)
     "scrapers.gyeongsangnam.gyeongnam_batch",
-    # 강원도 (15 of 32 — SSL errors, timeouts, JS onclick)
+    "scrapers.gyeongsangnam.gyeongnam_web_batch",
+    # 강원도 (15 of 32 static + 삼척시 .web Playwright)
     "scrapers.gangwon.gangwon_batch",
+    "scrapers.gangwon.gangwon_web_batch",
     # 전국 공사/공단
     "scrapers.gongsa.gongsa_batch",
+    "scrapers.gongsa.gongsa_web_batch",
     # 제주도 (3 of 4 — 서귀포시청 returns empty initial HTML)
     "scrapers.jeju.jeju_do",
     "scrapers.jeju.jeju_si",

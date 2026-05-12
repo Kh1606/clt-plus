@@ -26,5 +26,14 @@ venv/
 # Local scraper snapshot (used for debugging — Phase 2 will write to Supabase, not a file)
 scrapers/_local_snapshot.json
 
+# Debug / temp files generated during development
+debug_*.html
+f_entries*.txt
+fail_reasons.md
+srocm.txt
+temp.txt
+gbdc_debug.txt
+jinju_debug.html
+
 # old reference project — NOT part of clt-plus repo
 Aiforus_SaaS_pc/

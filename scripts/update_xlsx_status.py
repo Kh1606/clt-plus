@@ -22,6 +22,7 @@ SCRAPER_MODULES = [
     "scrapers.chungcheongnam.asan",
     "scrapers.chungcheongnam.chungnam_batch",
     "scrapers.chungcheongbuk.chungbuk_batch",
+    "scrapers.chungcheongbuk.chungbuk_web_batch",
     "scrapers.gyeonggi.gyeonggi_batch",
     "scrapers.jeonbuk.jeonbuk_batch",
     "scrapers.jeonbuk.jeonbuk_list_batch",
@@ -45,6 +46,7 @@ SCRAPER_MODULES = [
     "scrapers.incheon.incheon_si",
     "scrapers.incheon.jonggeon",
     "scrapers.gwangju.gmcc",
+    "scrapers.gwangju.gwangju_si",
     "scrapers.daejeon.daejeon_kukto",
     "scrapers.daejeon.nonsan_kukto",
     "scrapers.daejeon.chungju_kukto",
@@ -52,6 +54,7 @@ SCRAPER_MODULES = [
     "scrapers.daejeon.yesan_kukto",
     "scrapers.daejeon.daejeon_gunseol",
     "scrapers.daejeon.dcco",
+    "scrapers.daejeon.ddc",
     "scrapers.ulsan.umca",
     "scrapers.ulsan.ulsan_si",
     "scrapers.sejong.sejong_si_notice",
@@ -59,8 +62,11 @@ SCRAPER_MODULES = [
     "scrapers.sejong.sejong_batch",
     "scrapers.gyeongsangbuk.gyeongbuk_batch",
     "scrapers.gyeongsangnam.gyeongnam_batch",
+    "scrapers.gyeongsangnam.gyeongnam_web_batch",
     "scrapers.gangwon.gangwon_batch",
+    "scrapers.gangwon.gangwon_web_batch",
     "scrapers.gongsa.gongsa_batch",
+    "scrapers.gongsa.gongsa_web_batch",
     "scrapers.jeju.jeju_do",
     "scrapers.jeju.jeju_si",
     "scrapers.jeju.jpdc",
@@ -183,11 +189,13 @@ FAIL_SUBSTRINGS: list[str] = [
     "gapyeong.go.kr",                 # 가평군 — JS
     "hanam.go.kr",                    # 하남시 — JS
     "gwacheon.go.kr",                 # 과천시 — JS
-    "osan.go.kr",                     # 오산시 — JS
+    ".osan.go.kr",                    # 오산시 — JS (dot-prefix avoids false match on seosan.go.kr)
     "uiwang.go.kr",                   # 의왕시 — JS
     "yangju.go.kr",                   # 양주시 — JS
+    "seosan.go.kr",                   # 서산시 고시공고 — eminwon iframe (공지사항 already in working set)
+    "hygn.go.kr",                     # 함양군 고시공고 — .web CMS no table
     # 강원: SSL / timeout / JS onclick
-    "gn.go.kr",                       # 강원도청 — JS
+    ".gn.go.kr",                      # 강원도청 — JS (dot-prefix avoids false match on hygn.go.kr)
     "gangneung.go.kr",                # 강릉시 — SSL error
     "sokcho.go.kr",                   # 속초시 — SSL error
     "donghae.go.kr",                  # 동해시 — SSL error (dh.go.kr alternate)
@@ -334,7 +342,7 @@ FAIL_SUBSTRINGS: list[str] = [
     "changwon.go.kr/portal",
     # 경기 — JS onclick boards
     "hscity.go.kr/www/gosi/BD_notice",  # 화성시 — javascript:opGosiView onclick
-    "gm.go.kr/pt/user/nftcBbs/",        # 광명시 — JS board
+    # gm.go.kr/pt/user/nftcBbs/ — 광명시 now has scraper (working set overrides)
     "paju.go.kr/user/board/BD_board",   # 파주시 — JS onclick
     # 전북 — index.* JS portals
     "index.9is",
@@ -360,6 +368,8 @@ FAIL_DOMAINS: set[str] = {
 PATH_ALIASES: dict[str, str] = {
     # 경남 도로관리사업소: xlsx uses /street/board/list.gyeong, scraper uses /board/list.gyeong
     "gyeongnam.go.kr/street/board/list.gyeong": "gyeongnam.go.kr/board/list.gyeong",
+    # 임실군 고시공고: xlsx uses index.imsil portal, scraper uses board/list.imsil
+    "imsil.go.kr/index.imsil": "imsil.go.kr/board/list.imsil",
 }
 
 

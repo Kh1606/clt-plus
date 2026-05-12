@@ -3,68 +3,20 @@ export default function NoticePlaceholder() {
     <div
       style={{
         marginTop: 12,
-        padding: 24,
+        padding: '32px 24px',
         background: 'var(--bg-card)',
         border: '1px dashed var(--border-light)',
         borderRadius: 'var(--radius)',
+        textAlign: 'center',
+        color: 'var(--text-muted)',
+        fontSize: 13,
       }}
     >
-      <div
-        style={{
-          textAlign: 'center',
-          color: 'var(--text-muted)',
-          fontSize: 13,
-          marginBottom: 16,
-        }}
-      >
-        🚧 크롤러 미연결 — 추후 Supabase에서 공지사항 데이터를 가져옵니다
+      <div style={{ fontSize: 32, marginBottom: 8 }}>📭</div>
+      <div style={{ fontWeight: 600, color: 'var(--text-secondary)', marginBottom: 4 }}>
+        수집된 공지사항이 없습니다
       </div>
-      <div
-        style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))',
-          gap: 12,
-        }}
-      >
-        {[0, 1, 2].map(i => (
-          <div
-            key={i}
-            style={{
-              padding: 14,
-              background: 'var(--bg-hover)',
-              borderRadius: 'var(--radius-sm)',
-              opacity: 0.55,
-            }}
-          >
-            <div
-              style={{
-                height: 12,
-                width: '60%',
-                background: 'var(--border-light)',
-                borderRadius: 4,
-                marginBottom: 8,
-              }}
-            />
-            <div
-              style={{
-                height: 10,
-                width: '90%',
-                background: 'var(--border)',
-                borderRadius: 4,
-                marginBottom: 6,
-              }}
-            />
-            <div
-              style={{
-                height: 10,
-                width: '40%',
-                background: 'var(--border)',
-                borderRadius: 4,
-              }}
-            />
-          </div>
-        ))}
-      </div>
+      <div style={{ fontSize: 12 }}>이 기관은 아직 크롤러 대상에 포함되지 않았거나 공지가 없습니다.</div>
     </div>
   )
 }

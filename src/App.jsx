@@ -4,10 +4,10 @@ import Header from './components/Header.jsx'
 import RegionSidebar from './components/RegionSidebar.jsx'
 import SourceCard from './components/SourceCard.jsx'
 import NoticeList from './components/NoticeList.jsx'
+import RecentFeed from './components/RecentFeed.jsx'
 
 export default function App() {
   const [selected, setSelected] = useState(null)
-  // selected = { region: string, sub: string } | null
 
   const selectedSub = useMemo(() => {
     if (!selected) return null
@@ -21,12 +21,12 @@ export default function App() {
       <div
         style={{
           display: 'grid',
-          gridTemplateColumns: '300px 1fr',
-          gap: 24,
-          padding: 24,
+          gridTemplateColumns: '260px 1fr',
+          gap: 20,
+          padding: 20,
           flex: 1,
           minHeight: 0,
-          maxWidth: 1400,
+          maxWidth: 1440,
           width: '100%',
           margin: '0 auto',
         }}
@@ -38,7 +38,7 @@ export default function App() {
           onSelect={setSelected}
         />
         <main style={{ minWidth: 0, overflow: 'auto' }}>
-          {!selected && <EmptyState />}
+          {!selected && <RecentFeed onSelect={setSelected} />}
           {selected && selectedSub && (
             <SubEntityView region={selected.region} sub={selectedSub} />
           )}
@@ -49,37 +49,14 @@ export default function App() {
   )
 }
 
-function EmptyState() {
-  return (
-    <div
-      style={{
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        justifyContent: 'center',
-        height: '100%',
-        gap: 12,
-        color: 'var(--text-muted)',
-        textAlign: 'center',
-      }}
-    >
-      <div style={{ fontSize: 48 }}>📋</div>
-      <h2 style={{ fontSize: 20, color: 'var(--text-secondary)' }}>
-        왼쪽에서 시·도 또는 기관을 선택하세요
-      </h2>
-      <p style={{ fontSize: 14 }}>
-        선택한 기관의 출처 페이지와 (곧) 공지사항이 표시됩니다.
-      </p>
-    </div>
-  )
-}
-
 function SubEntityView({ region, sub }) {
+  const [noticeCount, setNoticeCount] = useState(null)
+
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: 28 }}>
       <div>
-        <div style={{ fontSize: 13, color: 'var(--text-muted)' }}>{region}</div>
-        <h1 style={{ fontSize: 24, fontWeight: 700, color: 'var(--text-primary)' }}>
+        <div style={{ fontSize: 12, color: 'var(--text-muted)' }}>{region}</div>
+        <h1 style={{ fontSize: 24, fontWeight: 700, color: 'var(--text-primary)', marginTop: 2 }}>
           {sub.name}
         </h1>
       </div>
@@ -107,9 +84,10 @@ function SubEntityView({ region, sub }) {
       <section>
         <SectionHeader
           title="최근 공지사항"
-          subtitle="Supabase에서 실시간 조회"
+          count={noticeCount ?? undefined}
+          subtitle="Supabase 실시간 조회"
         />
-        <NoticeList region={region} subEntity={sub.name} />
+        <NoticeList region={region} subEntity={sub.name} onCount={setNoticeCount} />
       </section>
     </div>
   )
@@ -121,18 +99,18 @@ function SectionHeader({ title, count, subtitle }) {
       style={{
         display: 'flex',
         alignItems: 'baseline',
-        gap: 12,
+        gap: 10,
         borderBottom: '1px solid var(--border)',
         paddingBottom: 8,
       }}
     >
-      <h2 style={{ fontSize: 18, fontWeight: 600, color: 'var(--text-primary)' }}>
+      <h2 style={{ fontSize: 17, fontWeight: 600, color: 'var(--text-primary)' }}>
         {title}
       </h2>
       {count != null && (
         <span
           style={{
-            fontSize: 12,
+            fontSize: 11,
             color: 'var(--accent)',
             background: 'var(--accent-light)',
             padding: '2px 8px',

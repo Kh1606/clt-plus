@@ -2,15 +2,14 @@
 충청북도 — batch of sites using the simple_table helper.
 
 Skipped (JS-rendered / SSL error / no table):
-  충북도청 고시공고 (contents.do JS / no table)
-  청주시 고시공고 + 4구 고시공고 (all contents.do JS / no table)
+  청주시 고시공고 + 4구 고시공고 (all contents.do JS / eminwon SSL error)
   영동군 (SSL cert error)
   진천군 고시공고 (no table)
   증평군 고시공고 (no table)
   단양군 고시공고 (no table)
 """
-from scrapers.base import SourceMeta
-from scrapers._helpers.simple_table import make_scrape
+from scrapers.base import SourceMeta, get
+from scrapers._helpers.simple_table import make_scrape, make_ssl_scrape, extract_from_html
 
 
 def _src(sub_entity, source_page, source_url):
@@ -27,7 +26,33 @@ def _entry(sub, page, url, **opts):
     return src, make_scrape(src, **opts)
 
 
+def _ssl_entry(sub, page, url, **opts):
+    src = _src(sub, page, url)
+    return src, make_ssl_scrape(src, **opts)
+
+
+def _chungbuk_gosi_entry():
+    # Source URL matches xlsx entry (contents.do); actual board is selectGosiPblancList.do
+    src = _src("충북도청", "고시공고", "https://www.chungbuk.go.kr/www/contents.do?key=422")
+    actual = "https://www.chungbuk.go.kr/www/selectGosiPblancList.do?key=422"
+
+    def _scrape():
+        r = get(actual)
+        return extract_from_html(r.content, src, title_col=2, require="selectGosiPblancView")
+
+    return src, _scrape
+
+
 SCRAPERS = [
+    # 충북도청 고시공고 — selectGosiPblancList hidden behind contents.do portal
+    _chungbuk_gosi_entry(),
+    # 영동군 — old TLS (yd21.go.kr); mode=V detail links, title col 1
+    _ssl_entry("영동군", "공지사항",
+               "https://www.yd21.go.kr/kr/html/sub02/020101.html",
+               require="mode=V"),
+    _ssl_entry("영동군", "고시공고",
+               "https://www.yd21.go.kr/kr/html/sub02/020103.html",
+               require="mode=V"),
     # 충북개발공사 — custom zboard, title col 1
     _entry("충북개발공사", "공지사항",
            "https://www.cbdc.co.kr/zboard/list.do?lmCode=BBSMSTR_000000000018",

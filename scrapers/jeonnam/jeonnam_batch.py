@@ -5,22 +5,133 @@ Skipped:
   전남개발공사 (empty response)
   영산강유역환경청 me.go.kr (blocked)
   담양군 (JS-rendered / no links)
-  곡성군 고시공고 (JS onclick only)
-  구례군 고시공고 (JavaScript:searchDetail)
-  고흥군, 함평군 (no table)
-  영암군, 신안군 고시공고 (connection timeout)
+  고흥군 (no table / JS-rendered)
+
+곡성군/구례군 고시공고 — GosiList.do board with searchDetail(id) onclick
+  → GosiView.do?menuNo={menuNo}&not_ancmt_mgt_no={id}
+
+해남군 고시공고 — 9is CMS with goDetialView onclick
+  → GET index.9is?contentUid={detail_uid}&notmgtNo={id}&nowPageNum=1
+
+영암군/신안군 고시공고 — col layout: 번호 | 고시유형 | 제목(with show/ link) | 담당 | 날짜 | 조회 → title_col=2
+함평군 고시공고 — GosiList.do no-table board; GosiDetail.do?SEQ={id} links → simple_list
 
 Col layout note:
   Most custom CMS boards: 번호 | 제목 | 담당 | 날짜 | 조회 → col=1
   고시공고 boards often add 고시번호 column: 번호 | 고시번호 | 제목 | ... → col=2
 """
-from scrapers.base import SourceMeta
+import re
+from urllib.parse import urljoin, urlparse, parse_qs
+
+from scrapers.base import SourceMeta, get, soup as mk_soup, Notice, parse_date, clean
 from scrapers._helpers.simple_table import make_scrape
+from scrapers._helpers.simple_list import make_list_scrape
 
 
 def _entry(sub, page, url, **opts):
     src = SourceMeta(region="전라남도", sub_entity=sub, source_page=page, source_url=url)
     return src, make_scrape(src, **opts)
+
+
+def _list(sub, page, url, **opts):
+    src = SourceMeta(region="전라남도", sub_entity=sub, source_page=page, source_url=url)
+    return src, make_list_scrape(src, **opts)
+
+
+def _searchdetail_gosi(sub, page, list_url, detail_uid_path="GosiView.do"):
+    """GosiList.do boards with searchDetail('id') onclick → GosiView.do detail."""
+    src = SourceMeta(region="전라남도", sub_entity=sub, source_page=page, source_url=list_url)
+    menu_no = parse_qs(urlparse(list_url).query).get("menuNo", [""])[0]
+    base = urljoin(list_url, detail_uid_path)
+
+    def _scrape():
+        r = get(src.source_url)
+        bs = mk_soup(r.text)
+        tables = bs.find_all("table")
+        if not tables:
+            return []
+        t = max(tables, key=lambda x: len(x.find_all("tr")))
+        notices: list[Notice] = []
+        for row in t.find_all("tr")[1:]:
+            tds = row.find_all("td")
+            if len(tds) < 3:
+                continue
+            a = None
+            for candidate in row.find_all("a"):
+                combined = (candidate.get("href") or "") + (candidate.get("onclick") or "")
+                if re.search(r"searchDetail\(", combined):
+                    a = candidate
+                    break
+            if not a:
+                continue
+            m = re.search(r"searchDetail\('(\d+)'\)", (a.get("href") or "") + (a.get("onclick") or ""))
+            if not m:
+                continue
+            title = clean(a.get_text())
+            if not title:
+                continue
+            detail_url = f"{base}?menuNo={menu_no}&not_ancmt_mgt_no={m.group(1)}"
+            posted_at = parse_date(tds[4].get_text()) if len(tds) > 4 else None
+            notices.append(Notice(
+                region=src.region, sub_entity=src.sub_entity,
+                source_page=src.source_page, source_url=src.source_url,
+                detail_url=detail_url, title=title, posted_at=posted_at,
+            ))
+        return notices
+
+    return src, _scrape
+
+
+_HAENAM_GOSI_DETAIL_UID = "18e3368f7913117f01791bdc63505ada"
+
+
+def _haenam_gosi():
+    """해남군 고시공고 — 9is CMS goDetialView onclick, detail via GET with notmgtNo."""
+    src = SourceMeta(
+        region="전라남도", sub_entity="해남군", source_page="고시공고",
+        source_url="https://www.haenam.go.kr/index.9is?contentUid=18e3368f7913117f017915ea3b971122",
+    )
+
+    def _scrape():
+        r = get(src.source_url)
+        bs = mk_soup(r.text)
+        tables = bs.find_all("table")
+        if not tables:
+            return []
+        t = max(tables, key=lambda x: len(x.find_all("tr")))
+        notices: list[Notice] = []
+        for row in t.find_all("tr")[1:]:
+            tds = row.find_all("td")
+            if len(tds) < 2:
+                continue
+            a = tds[1].find("a", onclick=True) if len(tds) > 1 else None
+            if not a:
+                for td in tds:
+                    a = td.find("a", onclick=True)
+                    if a:
+                        break
+            if not a:
+                continue
+            m = re.search(r"goDetialView\('(\d+)'", a.get("onclick", ""))
+            if not m:
+                continue
+            title = clean(a.get_text())
+            if not title:
+                continue
+            detail_url = (
+                f"https://www.haenam.go.kr/index.9is"
+                f"?contentUid={_HAENAM_GOSI_DETAIL_UID}"
+                f"&recordCountPerPage=10&notmgtNo={m.group(1)}&nowPageNum=1"
+            )
+            posted_at = parse_date(tds[-1].get_text()) if tds else None
+            notices.append(Notice(
+                region=src.region, sub_entity=src.sub_entity,
+                source_page=src.source_page, source_url=src.source_url,
+                detail_url=detail_url, title=title, posted_at=posted_at,
+            ))
+        return notices
+
+    return src, _scrape
 
 
 SCRAPERS = [
@@ -51,7 +162,7 @@ SCRAPERS = [
            "https://www.suncheon.go.kr/kr/news/0001/0001/",
            require="mode=view"),
     _entry("순천시", "고시공고",
-           "http://www.suncheon.go.kr/kr/news/0004/0005/0002/",
+           "http://www.suncheon.go.kr/kr/news/0004/0005/0001/",
            title_col=2, require="mode=view"),
     # 나주시 — custom CMS, mode=view
     _entry("나주시", "공지사항",
@@ -73,10 +184,16 @@ SCRAPERS = [
     _entry("곡성군", "공지사항",
            "https://www.gokseong.go.kr/kr/board/list.do?bbsId=BBS_000000000000150&menuNo=102001001000",
            require="view.do"),
+    # 곡성군 고시공고 — GosiList searchDetail onclick → GosiView.do
+    _searchdetail_gosi("곡성군", "고시공고",
+                       "https://www.gokseong.go.kr/board/GosiList.do?menuNo=102001003000"),
     # 구례군 공지사항 — eGovFrame board/view.do, title col 1
     _entry("구례군", "공지사항",
            "https://www.gurye.go.kr/board/list.do?bbsId=BBS_0000000000000056&menuNo=115004001000",
            require="view.do"),
+    # 구례군 고시공고 — GosiList searchDetail onclick → GosiView.do
+    _searchdetail_gosi("구례군", "고시공고",
+                       "https://www.gurye.go.kr/board/GosiList.do?menuNo=115004002001"),
     # 보성군 — custom CMS, mode=view, title col 1
     _entry("보성군", "공지사항",
            "https://www.boseong.go.kr/www/open_administration/city_news/notice",
@@ -107,6 +224,8 @@ SCRAPERS = [
     _entry("해남군", "공지사항",
            "https://www.haenam.go.kr/planweb/board/list.9is?contentUid=18e3368f5d745106015de95ebe732057&boardUid=18e3368f5fb80fdc015fdc42b7e003e0",
            require="view.9is"),
+    # 해남군 고시공고 — 9is CMS goDetialView onclick → GET with notmgtNo
+    _haenam_gosi(),
     # 영암군 공지사항 — custom CMS, show/ detail paths, title col 1
     _entry("영암군", "공지사항",
            "https://www.yeongam.go.kr/home/www/open_information/yeongam_news/notice",
@@ -151,4 +270,16 @@ SCRAPERS = [
     _entry("신안군", "공지사항",
            "https://www.shinan.go.kr/home/www/openinfo/participation_07/participation_07_02",
            require="show/"),
+    # 신안군 고시공고 — same CMS; col 2 (번호|고시유형|제목|담당|날짜|조회)
+    _entry("신안군", "고시공고",
+           "https://www.shinan.go.kr/home/www/openinfo/participation_07/participation_07_04/page.wscms",
+           title_col=2, require="show/"),
+    # 영암군 고시공고 — same show/ CMS; col 2 (번호|고시유형|제목|담당|날짜|조회)
+    _entry("영암군", "고시공고",
+           "https://www.yeongam.go.kr/home/www/open_information/yeongam_news/announcement/yeongam.go",
+           title_col=2, require="show/"),
+    # 함평군 고시공고 — GosiList.do no-table board; links are GosiDetail.do?SEQ={id}
+    _list("함평군", "고시공고",
+          "https://www.hampyeong.go.kr/pg/GosiList.do?pageId=www273",
+          require="GosiDetail.do"),
 ]

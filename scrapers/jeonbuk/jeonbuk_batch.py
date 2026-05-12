@@ -4,7 +4,6 @@
 Skipped:
   전북개발공사 (SSL error)
   전북지방환경청 me.go.kr (blocked)
-  익산지방국토관리청 BRD.jsp (returns 0 notices)
   남원시 공지 (404 or JS onclick)
   무주군 고시 (index.9is is a portal menu page with no article links)
   진안군 공지/고시, 장수군 공지/고시, 고창군 공지/고시 → jeonbuk_list_batch.py
@@ -16,7 +15,7 @@ molit 국토관리사무소 boards use scrape_molit_jsp helper (LST.jsp, auto-de
 """
 from scrapers.base import SourceMeta
 from scrapers._helpers.simple_table import make_scrape
-from scrapers._helpers.simple_list import make_list_scrape
+from scrapers._helpers.simple_list import make_list_scrape, make_ssl_list_scrape
 from scrapers._helpers.molit_jsp import scrape_molit_jsp
 
 
@@ -35,7 +34,16 @@ def _molit(sub, page, url):
     return src, (lambda s=src: scrape_molit_jsp(s))
 
 
+def _ssl_lentry(sub, page, url, **opts):
+    src = SourceMeta(region="전라북도", sub_entity=sub, source_page=page, source_url=url)
+    return src, make_ssl_list_scrape(src, **opts)
+
+
 SCRAPERS = [
+    # 전북개발공사 — list in <ul>/<li>, old TLS; eGovFrame mode=view&nttId detail links
+    _ssl_lentry("전북개발공사", "공지사항",
+                "https://www.jbdc.co.kr/notice/notice.do",
+                require="mode=view&nttId="),
     # 전북도청 공지사항 — board/list.jeonbuk (BBS_0000012), title col 1
     _entry("전북도청", "공지사항",
            "https://www.jeonbuk.go.kr/board/list.jeonbuk?boardId=BBS_0000012&menuCd=DOM_000000103001002001&contentsSid=841&cpath=",
@@ -109,6 +117,10 @@ SCRAPERS = [
            "https://www.muju.go.kr/planweb/board/list.9is?contentUid=ff8080816c5f9d47016cbd3ae19f006b&boardUid=ff8080816d135a54016d1ecde9d8001a&categoryUid1=ff8080816d135a54016d1f57e4fa00fd",
            require="view.9is"),
     # molit 국토관리사무소 boards
+    # 익산지방국토관리청 고시공고 — BRD.jsp; col num|고시구분|제목|날짜|담당|조회 → title_col=2
+    _entry("익산지방국토관리청", "고시공고",
+           "https://www.molit.go.kr/irocm/USR/BORD0201/m_15643/BRD.jsp",
+           title_col=2, require="DTL"),
     _molit("광주 국토관리사무소", "공지사항",
            "http://www.molit.go.kr/irocm/USR/BORD0201/m_19663/LST.jsp"),
     _molit("남원 국토관리사무소", "공지사항",
