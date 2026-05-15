@@ -1,4 +1,6 @@
-export default function Header() {
+import ModeToggle from './ModeToggle.jsx'
+
+export default function Header({ viewMode, setViewMode }) {
   return (
     <header
       style={{
@@ -42,6 +44,11 @@ export default function Header() {
             공공기관 공지사항 통합 뷰어
           </div>
         </div>
+        {setViewMode && (
+          <div style={{ marginLeft: 'auto' }}>
+            <ModeToggle viewMode={viewMode} setViewMode={setViewMode} />
+          </div>
+        )}
       </div>
     </header>
   )

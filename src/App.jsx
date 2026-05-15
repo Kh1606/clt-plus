@@ -5,8 +5,11 @@ import RegionSidebar from './components/RegionSidebar.jsx'
 import SourceCard from './components/SourceCard.jsx'
 import NoticeList from './components/NoticeList.jsx'
 import RecentFeed from './components/RecentFeed.jsx'
+import MapView from './components/MapView/MapView.jsx'
+import useViewMode from './hooks/useViewMode.js'
 
 export default function App() {
+  const [viewMode, setViewMode] = useViewMode()
   const [selected, setSelected] = useState(null)
 
   const selectedSub = useMemo(() => {
@@ -17,33 +20,37 @@ export default function App() {
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
-      <Header />
-      <div
-        style={{
-          display: 'grid',
-          gridTemplateColumns: '260px 1fr',
-          gap: 20,
-          padding: 20,
-          flex: 1,
-          minHeight: 0,
-          maxWidth: 1440,
-          width: '100%',
-          margin: '0 auto',
-        }}
-        className="clt-shell"
-      >
-        <RegionSidebar
-          regions={regionsData}
-          selected={selected}
-          onSelect={setSelected}
-        />
-        <main style={{ minWidth: 0, overflow: 'auto' }}>
-          {!selected && <RecentFeed onSelect={setSelected} />}
-          {selected && selectedSub && (
-            <SubEntityView region={selected.region} sub={selectedSub} />
-          )}
-        </main>
-      </div>
+      <Header viewMode={viewMode} setViewMode={setViewMode} />
+      {viewMode === 'map' ? (
+        <MapView />
+      ) : (
+        <div
+          style={{
+            display: 'grid',
+            gridTemplateColumns: '260px 1fr',
+            gap: 20,
+            padding: 20,
+            flex: 1,
+            minHeight: 0,
+            maxWidth: 1440,
+            width: '100%',
+            margin: '0 auto',
+          }}
+          className="clt-shell"
+        >
+          <RegionSidebar
+            regions={regionsData}
+            selected={selected}
+            onSelect={setSelected}
+          />
+          <main style={{ minWidth: 0, overflow: 'auto' }}>
+            {!selected && <RecentFeed onSelect={setSelected} />}
+            {selected && selectedSub && (
+              <SubEntityView region={selected.region} sub={selectedSub} />
+            )}
+          </main>
+        </div>
+      )}
       <ResponsiveStyles />
     </div>
   )
