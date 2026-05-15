@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { animated, useSpring } from '@react-spring/web'
-import { X } from 'lucide-react'
+import { X, MapPin } from 'lucide-react'
 import NoticeList from '../NoticeList.jsx'
 import InstitutionPicker from './InstitutionPicker.jsx'
 
@@ -19,64 +19,87 @@ export default function RegionPanel({
   }, [region, subEntities])
 
   const spring = useSpring({
-    transform: open ? 'translateY(0%)' : 'translateY(100%)',
+    transform: open ? 'translateX(0%)' : 'translateX(105%)',
     opacity: open ? 1 : 0,
-    config: { tension: 280, friction: 28 },
+    config: { tension: 280, friction: 30 },
   })
 
   return (
-    <animated.div
+    <animated.aside
+      aria-hidden={!open}
       style={{
         ...spring,
         position: 'absolute',
-        left: 0,
+        top: 0,
         right: 0,
         bottom: 0,
-        height: '45%',
+        width: 'min(420px, 92%)',
         background: 'var(--bg-card)',
-        borderTop: '1px solid var(--border)',
+        borderLeft: '1px solid var(--border)',
         borderTopLeftRadius: 'var(--radius)',
-        borderTopRightRadius: 'var(--radius)',
-        boxShadow: '0 -8px 32px rgba(13,27,110,0.15)',
-        padding: '16px 20px',
+        borderBottomLeftRadius: 'var(--radius)',
+        boxShadow: '-12px 0 32px rgba(13,27,110,0.15)',
         display: 'flex',
         flexDirection: 'column',
-        gap: 12,
         zIndex: 30,
         pointerEvents: open ? 'auto' : 'none',
       }}
     >
-      <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
+      {/* Header */}
+      <header
+        style={{
+          padding: '18px 20px 14px',
+          borderBottom: '1px solid var(--border)',
+          display: 'flex',
+          alignItems: 'flex-start',
+          gap: 12,
+          flexShrink: 0,
+        }}
+      >
         <div style={{ minWidth: 0, flex: 1 }}>
-          <div style={{ fontSize: 12, color: 'var(--text-muted)' }}>
-            지역 선택
-          </div>
           <div
             style={{
-              fontSize: 18,
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: 6,
+              fontSize: 11,
+              fontWeight: 600,
+              letterSpacing: 0.4,
+              textTransform: 'uppercase',
+              color: 'var(--accent)',
+            }}
+          >
+            <MapPin size={12} />
+            선택된 지역
+          </div>
+          <h2
+            style={{
+              fontSize: 22,
               fontWeight: 700,
               color: 'var(--text-primary)',
-              display: 'flex',
-              alignItems: 'baseline',
-              gap: 8,
+              marginTop: 4,
+              lineHeight: 1.2,
+              wordBreak: 'keep-all',
             }}
           >
             {region ?? '—'}
-            {municipalityHint && (
-              <span
-                style={{
-                  fontSize: 12,
-                  fontWeight: 500,
-                  color: 'var(--accent)',
-                  background: 'var(--accent-light)',
-                  padding: '2px 8px',
-                  borderRadius: 999,
-                }}
-              >
-                {municipalityHint} · 행정구별 분류는 곧 지원 예정
-              </span>
-            )}
-          </div>
+          </h2>
+          {municipalityHint && (
+            <div
+              style={{
+                marginTop: 8,
+                display: 'inline-block',
+                fontSize: 11,
+                color: 'var(--accent)',
+                background: 'var(--accent-light)',
+                padding: '3px 10px',
+                borderRadius: 999,
+                fontWeight: 500,
+              }}
+            >
+              {municipalityHint} · 행정구별 분류는 곧 지원 예정
+            </div>
+          )}
         </div>
         <button
           onClick={onClose}
@@ -90,23 +113,98 @@ export default function RegionPanel({
             borderRadius: 999,
             background: 'var(--bg-hover)',
             color: 'var(--text-secondary)',
+            flexShrink: 0,
           }}
         >
           <X size={16} />
         </button>
-      </div>
+      </header>
 
-      <InstitutionPicker
-        subEntities={subEntities}
-        selectedName={selectedSub}
-        onSelect={setSelectedSub}
-      />
+      {/* Institutions list */}
+      <section
+        style={{
+          padding: '14px 20px 10px',
+          borderBottom: '1px solid var(--border)',
+          flexShrink: 0,
+        }}
+      >
+        <SectionLabel title="기관" count={subEntities?.length ?? 0} />
+        <div style={{ marginTop: 10, maxHeight: 200, overflowY: 'auto' }}>
+          <InstitutionPicker
+            subEntities={subEntities}
+            selectedName={selectedSub}
+            onSelect={setSelectedSub}
+          />
+        </div>
+      </section>
 
-      <div style={{ flex: 1, minHeight: 0, overflow: 'auto' }}>
-        {region && selectedSub && (
-          <NoticeList region={region} subEntity={selectedSub} />
-        )}
-      </div>
-    </animated.div>
+      {/* Notices for selected institution */}
+      <section
+        style={{
+          flex: 1,
+          minHeight: 0,
+          display: 'flex',
+          flexDirection: 'column',
+          padding: '14px 20px 20px',
+        }}
+      >
+        <SectionLabel title="최근 공지사항" subtitle={selectedSub ?? undefined} />
+        <div style={{ flex: 1, minHeight: 0, overflowY: 'auto', marginTop: 10 }}>
+          {region && selectedSub ? (
+            <NoticeList region={region} subEntity={selectedSub} />
+          ) : (
+            <div style={{ fontSize: 13, color: 'var(--text-muted)' }}>
+              기관을 선택하세요
+            </div>
+          )}
+        </div>
+      </section>
+    </animated.aside>
+  )
+}
+
+function SectionLabel({ title, count, subtitle }) {
+  return (
+    <div style={{ display: 'flex', alignItems: 'baseline', gap: 8, flexWrap: 'wrap' }}>
+      <span
+        style={{
+          fontSize: 11,
+          fontWeight: 700,
+          letterSpacing: 0.4,
+          textTransform: 'uppercase',
+          color: 'var(--text-secondary)',
+        }}
+      >
+        {title}
+      </span>
+      {count != null && (
+        <span
+          style={{
+            fontSize: 11,
+            color: 'var(--accent)',
+            background: 'var(--accent-light)',
+            padding: '2px 7px',
+            borderRadius: 999,
+            fontWeight: 600,
+          }}
+        >
+          {count}
+        </span>
+      )}
+      {subtitle && (
+        <span
+          style={{
+            fontSize: 12,
+            color: 'var(--text-muted)',
+            minWidth: 0,
+            overflow: 'hidden',
+            textOverflow: 'ellipsis',
+            whiteSpace: 'nowrap',
+          }}
+        >
+          · {subtitle}
+        </span>
+      )}
+    </div>
   )
 }

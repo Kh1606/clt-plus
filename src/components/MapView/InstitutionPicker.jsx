@@ -1,4 +1,4 @@
-import { Building2 } from 'lucide-react'
+import { Building2, ChevronRight } from 'lucide-react'
 
 export default function InstitutionPicker({ subEntities, selectedName, onSelect }) {
   if (!subEntities?.length) {
@@ -10,41 +10,80 @@ export default function InstitutionPicker({ subEntities, selectedName, onSelect 
   }
 
   return (
-    <div
+    <ul
+      role="list"
       style={{
         display: 'flex',
-        gap: 8,
-        overflowX: 'auto',
-        paddingBottom: 4,
+        flexDirection: 'column',
+        gap: 4,
+        listStyle: 'none',
       }}
     >
       {subEntities.map(sub => {
         const active = sub.name === selectedName
+        const sourceCount = sub.sources?.length ?? 0
         return (
-          <button
-            key={sub.name}
-            onClick={() => onSelect(sub.name)}
-            style={{
-              display: 'inline-flex',
-              alignItems: 'center',
-              gap: 6,
-              padding: '8px 14px',
-              background: active ? 'var(--accent)' : 'var(--bg-card)',
-              color: active ? '#fff' : 'var(--text-primary)',
-              border: `1px solid ${active ? 'var(--accent)' : 'var(--border)'}`,
-              borderRadius: 999,
-              fontSize: 13,
-              fontWeight: 500,
-              whiteSpace: 'nowrap',
-              transition: 'background 0.15s ease, border-color 0.15s ease, color 0.15s ease',
-              flexShrink: 0,
-            }}
-          >
-            <Building2 size={13} />
-            {sub.name}
-          </button>
+          <li key={sub.name}>
+            <button
+              onClick={() => onSelect(sub.name)}
+              style={{
+                width: '100%',
+                display: 'flex',
+                alignItems: 'center',
+                gap: 10,
+                padding: '9px 12px',
+                background: active ? 'var(--accent-light)' : 'transparent',
+                border: `1px solid ${active ? 'var(--accent)' : 'transparent'}`,
+                borderRadius: 8,
+                fontSize: 13,
+                fontWeight: active ? 600 : 500,
+                color: active ? 'var(--accent)' : 'var(--text-primary)',
+                textAlign: 'left',
+                transition: 'background 0.15s ease, color 0.15s ease, border-color 0.15s ease',
+              }}
+              onMouseEnter={e => {
+                if (!active) e.currentTarget.style.background = 'var(--bg-hover)'
+              }}
+              onMouseLeave={e => {
+                if (!active) e.currentTarget.style.background = 'transparent'
+              }}
+            >
+              <Building2 size={14} style={{ flexShrink: 0, opacity: active ? 1 : 0.55 }} />
+              <span
+                style={{
+                  flex: 1,
+                  minWidth: 0,
+                  overflow: 'hidden',
+                  textOverflow: 'ellipsis',
+                  whiteSpace: 'nowrap',
+                }}
+              >
+                {sub.name}
+              </span>
+              {sourceCount > 0 && (
+                <span
+                  style={{
+                    fontSize: 11,
+                    color: active ? 'var(--accent)' : 'var(--text-muted)',
+                    fontWeight: 500,
+                    flexShrink: 0,
+                  }}
+                >
+                  {sourceCount}
+                </span>
+              )}
+              <ChevronRight
+                size={14}
+                style={{
+                  flexShrink: 0,
+                  opacity: active ? 1 : 0.3,
+                  color: active ? 'var(--accent)' : 'var(--text-muted)',
+                }}
+              />
+            </button>
+          </li>
         )
       })}
-    </div>
+    </ul>
   )
 }
